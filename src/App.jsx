@@ -1,17 +1,25 @@
 import './App.css';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { RouterProvider, Routes, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
+import Root from './pages/Root/Root';
 import Home from './pages/Home/Home';
+import Movie, { loader as movieLoader } from './pages/Movie/Movie';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Root />}>
+      <Route index element={<Home />} />
+      <Route path="/movies/:movieId" element={<Movie />} loader={movieLoader} />
+    </Route>
+
+  )
+);
 
 function App() {
   return (
     <div className="wrapper">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

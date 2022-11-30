@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
+import { Link } from 'react-router-dom';
+
 import './MovieList.css';
-import ListGroup from 'react-bootstrap/ListGroup';
 
 export default function MovieList() {
     const [movies, setMovies] = useState([]);
@@ -28,11 +29,14 @@ export default function MovieList() {
                 <ul className="movie-list">
                     {movies.map(movie => (
                         <li key={movie.id} className="movie">
-                            <img
-                                src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
-                                className="movie-poster"
-                                alt={movie.title}
-                            />
+                            <Link to={`movies/${movie.id}`}>
+                                <img
+                                    src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+                                    className="movie-poster"
+                                    alt={movie.title}
+                                />
+                            </Link>
+
                         </li>
                     ))}
                 </ul>
