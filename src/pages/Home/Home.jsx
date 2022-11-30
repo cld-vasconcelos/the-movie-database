@@ -1,21 +1,8 @@
 
 import { useEffect } from 'react';
 import { Form, Link, useLoaderData } from 'react-router-dom';
+import { GetMovies } from '../helpers/movies';
 import './Home.css';
-
-async function GetMovies(q) {
-    const url = q
-        ? `https://api.themoviedb.org/3/search/movie?api_key=4ac15274164d3710a133b4a3023705c6&language=en-US&query=${q}&page=1&include_adult=false`
-        : "https://api.themoviedb.org/3/movie/popular?api_key=4ac15274164d3710a133b4a3023705c6&language=en-US&page=1";
-    return fetch(url, {
-        method: "GET",
-        header: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
-        .then(response => response.results.slice(0, 5))
-}
 
 export async function loader({ request }) {
     const url = new URL(request.url);
