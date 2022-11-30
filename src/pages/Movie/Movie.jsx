@@ -6,7 +6,7 @@ import './Movie.css';
 export async function loader({ params }) {
     const movie = await GetMovie(params.movieId);
 
-    if(!movie?.success) {
+    if(movie.success === false) { //'movie' only has 'success' property when the request fails, since this condition
         throw new Response("", {
             status: 404,
             statusText: "Not Found"

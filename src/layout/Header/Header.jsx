@@ -6,7 +6,9 @@ export default function Header() {
         <>
             <div className="header-wrapper">
                 <div className="header-logo">
-                    <img src={logoUrl} alt="tmdb" />
+                    <a href="/">
+                        <img src={logoUrl} alt="tmdb" />
+                    </a>
                 </div>
                 <div className="header-title">
                     The Movie Database
