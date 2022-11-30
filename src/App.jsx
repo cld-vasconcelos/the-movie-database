@@ -3,13 +3,13 @@ import './App.css';
 import { RouterProvider, Routes, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
 import Root from './pages/Root/Root';
-import Home from './pages/Home/Home';
+import Home, { loader as homeLoader } from './pages/Home/Home';
 import Movie, { loader as movieLoader } from './pages/Movie/Movie';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route index element={<Home />} />
+      <Route index element={<Home />} loader={homeLoader} />
       <Route path="/movies/:movieId" element={<Movie />} loader={movieLoader} />
     </Route>
 

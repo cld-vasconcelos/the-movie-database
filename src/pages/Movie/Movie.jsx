@@ -40,23 +40,6 @@ export default function Movie() {
                     </div>
                 </div>
             </div>
-            {/* <div className="movie-detail">
-                <div className="movie-detail-poster">
-                    <img
-                        src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
-                        className="movie-poster"
-                        alt={movie.title}
-                    />
-                </div>
-                <div class="movie-detail-info">
-                <div className="movie-detail-title">
-                        {movie.title}
-                    </div>
-                    <div className="movie-detail-title">
-                        {movie.release_date.split("-")[0]} • {movie.runtime}m
-                    </div>
-                </div>
-            </div> */}
         </>
     );
 }
