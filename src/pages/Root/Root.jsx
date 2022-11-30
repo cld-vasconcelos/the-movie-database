@@ -1,10 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Header from "../../layout/Header/Header";
+
+import './Root.css';
 
 export default function Root() {
     return (
         <>
-            <h2>TMDB</h2>
-            <Outlet />
+            <Header />
+            <div className="content">
+                <Outlet />
+            </div>
         </>
     );
 }

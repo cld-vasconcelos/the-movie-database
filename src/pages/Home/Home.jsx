@@ -18,7 +18,7 @@ export default function Home() {
 
     useEffect(() => {
         document.getElementById("q").value = q;
-    });
+    }, [q]);
 
     return (
         <div>
@@ -34,9 +34,9 @@ export default function Home() {
                     />
                 </Form>
             </div>
-            <div>
+            <div className="movie-list">
                 {movies.length ? (
-                    <ul className="movie-list">
+                    <ul >
                         {movies.map(movie => (
                             <li key={movie.id} className="movie">
                                 <Link to={`movies/${movie.id}`}>
@@ -50,7 +50,7 @@ export default function Home() {
                             </li>
                         ))}
                     </ul>
-                ) : <p><i>No movies</i></p>}
+                ) : <p><i>No results</i></p>}
             </div>
         </div>
     );
