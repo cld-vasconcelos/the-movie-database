@@ -1,6 +1,6 @@
 import './App.css';
 
-import { RouterProvider, Routes, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
 import Root from './pages/Root/Root';
 import Home, { loader as homeLoader } from './pages/Home/Home';

@@ -2,10 +2,6 @@ import { useLoaderData } from "react-router-dom";
 
 import './Movie.css';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 async function GetMovie(movieId) {
     return fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=4ac15274164d3710a133b4a3023705c6`, {
         method: "GET",
