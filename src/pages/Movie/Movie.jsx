@@ -5,12 +5,19 @@ import './Movie.css';
 
 export async function loader({ params }) {
     const movie = await GetMovie(params.movieId);
+
+    if(!movie?.success) {
+        throw new Response("", {
+            status: 404,
+            statusText: "Not Found"
+        });
+    }
+
     return movie;
 }
 
 export default function Movie() {
     const movie = useLoaderData();
-    console.log(movie)
     return (
         <>
             <div className="movie-detail">
@@ -21,7 +28,7 @@ export default function Movie() {
                         alt={movie.title}
                     />
                 </div>
-                <div class="movie-detail-info">
+                <div className="movie-detail-info">
                     <div className="movie-detail-title">
                         {movie.title}
                     </div>

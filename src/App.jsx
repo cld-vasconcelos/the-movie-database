@@ -6,11 +6,15 @@ import Root from './pages/Root/Root';
 import Home, { loader as homeLoader } from './pages/Home/Home';
 import Movie, { loader as movieLoader } from './pages/Movie/Movie';
 
+import Error from './pages/Error/Error';
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index element={<Home />} loader={homeLoader} />
-      <Route path="/movies/:movieId" element={<Movie />} loader={movieLoader} />
+    <Route path="/" element={<Root />} >
+      <Route errorElement={<Error />}>
+        <Route index element={<Home />} loader={homeLoader} />
+        <Route path="/movies/:movieId" element={<Movie />} loader={movieLoader} />
+      </Route>
     </Route>
 
   )
