@@ -1,21 +1,26 @@
-.movie-list {
-    padding: 2rem 0 !important;
+.top-movies {
+    margin: 0 12rem;
 }
 
-.movie-list ul {
+.top-movies-list ul {
     list-style: none;
     padding: 0;
     display: inline-flex;
 }
 
-.movie {
-    padding: 0 1rem;
+.top-movies-list li {
+    padding: 0 §rem;
 
-    width: 15vw;
+    width: 14vw;
     height: 70vh;
 }
 
-.movie-poster {
+.top-movie {
+    width: 15rem;
+    padding: 0 1rem;
+}
+
+.top-movie img {
     max-width: 100%;
     max-height: 100%;
 }

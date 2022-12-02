@@ -1,56 +1,41 @@
 
-import { useEffect } from 'react';
-import { Form, Link, useLoaderData } from 'react-router-dom';
-import { GetMovies } from '../../helpers/movies.js';
+import { Link, useLoaderData } from 'react-router-dom';
+import { GetTopMovies } from '../../helpers/movies.js';
 import './Home.css';
 
 export async function loader({ request }) {
-    const url = new URL(request.url);
-    const q = url.searchParams.get("q");
+    const movies = await GetTopMovies();
 
-    const movies = await GetMovies(q);
-
-    return { movies, q };
+    return movies;
 }
 
 export default function Home() {
-    const { movies, q } = useLoaderData();
-
-    useEffect(() => {
-        document.getElementById("q").value = q;
-    }, [q]);
+    const movies = useLoaderData();
 
     return (
         <div>
-            <div className='movie-search'>
-                <Form id="search-form" role="search">
-                    <input
-                        id="q"
-                        aria-label="Search movies"
-                        placeholder="Search"
-                        type="search"
-                        name="q"
-                        defaultValue={q}
-                    />
-                </Form>
-            </div>
-            <div className="movie-list">
-                {movies.length ? (
-                    <ul >
-                        {movies.map(movie => (
-                            <li key={movie.id} className="movie">
-                                <Link to={`movies/${movie.id}`}>
-                                    <img
-                                        src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
-                                        className="movie-poster"
-                                        alt={movie.title}
-                                    />
-                                </Link>
+            
+            <div className="top-movies">
+                <h3 style={{ textAlign: "left" }}>
+                    Top movies
+                </h3>
+                <div className='top-movies-list'>
+                    {movies.length ? (
+                        <ul>
+                            {movies.map(movie => (
+                                <li key={movie.id} className="top-movie">
+                                    <Link to={`movies/${movie.id}`}>
+                                        <img
+                                            src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+                                            alt={movie.title}
+                                        />
+                                    </Link>
 
-                            </li>
-                        ))}
-                    </ul>
-                ) : <p><i>No results</i></p>}
+                                </li>
+                            ))}
+                        </ul>
+                    ) : <p><i>No results</i></p>}
+                </div>
             </div>
         </div>
     );

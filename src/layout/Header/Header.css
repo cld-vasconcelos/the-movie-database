@@ -1,13 +1,43 @@
 .header-wrapper {
     display: flex;
-}
-
-.header-logo {
-    width: 4rem;
-    margin: 1rem 2rem;
+    text-align: left;
 }
 
 .header-title {
+    display: flex;
+}
+
+.header-title-logo {
+    position: relative;
+    width: 8rem;
+    padding: 1rem;
+}
+
+.header-title-text {
+    position: relative;
+    width: 20rem;
     font-size: 2rem;
-    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+.header-search {
+    position: relative;
+    width: 100%;
+    margin: 0 5rem;
+}
+
+.header-search-input {
+    width: 100%;
+}
+
+.header-search-input input {
+    width: 100%;
+}
+
+.header-element-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
