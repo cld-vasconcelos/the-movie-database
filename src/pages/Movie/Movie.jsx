@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import { GetMovie } from "../../helpers/movies";
+import Moment from 'moment';
 
 import './Movie.css';
 
@@ -27,12 +28,12 @@ export default function Movie() {
         {
             key: "release_date",
             title: "Release Date",
-            content: movie.release_date
+            content: Moment(movie.release_date, "YYYY-MM-DD").format("MMMM DD, YYYY")
         },
         {
             key: "runtime",
             title: "Runtime",
-            content: movie.runtime
+            content: `${movie.runtime} minutes`
         }
     ];
     return (
@@ -61,30 +62,6 @@ export default function Movie() {
                                     </div>
                                 </li>
                             ))}
-                            {/* <li>
-                                <div className="info-title">
-                                    Overview
-                                </div>
-                                <div className="info-content">
-                                    {movie.overview}
-                                </div>
-                            </li>
-                            <li>
-                                <div className="info-title">
-                                    Release Date
-                                </div>
-                                <div className="info-content">
-                                    {movie.release_date}
-                                </div>
-                            </li>
-                            <li>
-                                <div className="info-title">
-                                    Runtime
-                                </div>
-                                <div className="info-content">
-                                    {movie.runtime}
-                                </div>
-                            </li> */}
                         </ul>
                     </div>
                 </div>
