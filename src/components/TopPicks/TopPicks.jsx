@@ -12,7 +12,7 @@ export default function TopPick(props) {
                     <ul>
                         {picks.map(pick => (
                             <li key={pick.id} className="top-pick">
-                                <Link to={`tv/${pick.id}`}>
+                                <Link to={`${props.mediaType}/${pick.id}`}>
                                     <img
                                         src={"https://image.tmdb.org/t/p/original" + pick.poster_path}
                                         alt={pick.title}

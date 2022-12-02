@@ -5,7 +5,7 @@ import { GetTopMovies } from '../../helpers/movies.js';
 import { GetTopShows } from '../../helpers/shows.js';
 import './Home.css';
 
-export async function loader({ request }) {
+export async function loader() {
     const movies = await GetTopMovies();
     const shows = await GetTopShows();
     return { movies, shows };
@@ -16,8 +16,8 @@ export default function Home() {
 
     return (
         <>
-            <TopPick type="Movie" picks={movies} />
-            <TopPick type="TV Show" picks={shows} />
+            <TopPick mediaType="movie" picks={movies} />
+            <TopPick mediaType="tv" picks={shows} />
         </>
     );
 }

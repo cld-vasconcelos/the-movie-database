@@ -12,3 +12,23 @@ export async function GetTopShows() {
         .then(response => response.json())
         .then(response => response.results.slice(0, 5))
 }
+
+export async function GetShow(showId) {
+    return fetch(`${baseUrl}/tv/${showId}?${apiKey}`, {
+        method: "GET",
+        header: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+}
+
+export async function GetShowCredits(movieId) {
+    return fetch(`${baseUrl}/tv/${movieId}/credits?${apiKey}`, {
+        method: "GET",
+        header: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+}
