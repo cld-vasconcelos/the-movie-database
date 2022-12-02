@@ -7,13 +7,13 @@
 .top-movies-list li {
     padding: 0 §rem;
 
-    width: 14vw;
-    height: 70vh;
+    width: 13rem;
 }
 
 .top-movie {
     width: 15rem;
     padding: 0 1rem;
+    margin-bottom: 2rem
 }
 
 .top-movie img {
