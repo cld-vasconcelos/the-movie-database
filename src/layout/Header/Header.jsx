@@ -13,7 +13,13 @@ export default function Header() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if(query === "") {
+            return;
+        }
+        
         navigate(`/search?q=${query}`);
+        setQuery("");
     }
 
     const handleChange = (event) => {
