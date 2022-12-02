@@ -1,7 +1,7 @@
 
 import { useEffect } from 'react';
 import { Form, Link, useLoaderData } from 'react-router-dom';
-import { GetMovies } from '../helpers/movies';
+import { GetMovies } from '../../helpers/movies.js';
 import './Home.css';
 
 export async function loader({ request }) {

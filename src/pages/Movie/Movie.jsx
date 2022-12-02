@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router-dom";
-import { GetMovie } from "../helpers/movies";
+import { GetMovie } from "../../helpers/movies";
 
 import './Movie.css';
 
 export async function loader({ params }) {
     const movie = await GetMovie(params.movieId);
 
-    if(movie.success === false) { //'movie' only has 'success' property when the request fails, since this condition
+    if (movie.success === false) { //'movie' only has 'success' property when the request fails, since this condition
         throw new Response("", {
             status: 404,
             statusText: "Not Found"
@@ -18,6 +18,23 @@ export async function loader({ params }) {
 
 export default function Movie() {
     const movie = useLoaderData();
+    const details = [
+        {
+            key: "overview",
+            title: "Overview",
+            content: movie.overview
+        },
+        {
+            key: "release_date",
+            title: "Release Date",
+            content: movie.release_date
+        },
+        {
+            key: "runtime",
+            title: "Runtime",
+            content: movie.runtime
+        }
+    ];
     return (
         <>
             <div className="movie-detail">
@@ -31,6 +48,44 @@ export default function Movie() {
                 <div className="movie-detail-info">
                     <div className="movie-detail-title">
                         {movie.title}
+                    </div>
+                    <div>
+                        <ul>
+                            {details.map((detail) => (
+                                <li key={detail.key}>
+                                    <div className="info-title">
+                                        {detail.title}
+                                    </div>
+                                    <div className="info-content">
+                                        {detail.content}
+                                    </div>
+                                </li>
+                            ))}
+                            {/* <li>
+                                <div className="info-title">
+                                    Overview
+                                </div>
+                                <div className="info-content">
+                                    {movie.overview}
+                                </div>
+                            </li>
+                            <li>
+                                <div className="info-title">
+                                    Release Date
+                                </div>
+                                <div className="info-content">
+                                    {movie.release_date}
+                                </div>
+                            </li>
+                            <li>
+                                <div className="info-title">
+                                    Runtime
+                                </div>
+                                <div className="info-content">
+                                    {movie.runtime}
+                                </div>
+                            </li> */}
+                        </ul>
                     </div>
                 </div>
             </div>
