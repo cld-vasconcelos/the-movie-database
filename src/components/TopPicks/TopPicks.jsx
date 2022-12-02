@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import config from "../../config";
 import "./TopPicks.css";
 
 export default function TopPick(props) {
@@ -14,7 +15,7 @@ export default function TopPick(props) {
                             <li key={pick.id} className="top-pick">
                                 <Link to={`${props.mediaType}/${pick.id}`}>
                                     <img
-                                        src={"https://image.tmdb.org/t/p/original" + pick.poster_path}
+                                        src={`${config.imageBaseUrl}${pick.poster_path}`}
                                         alt={pick.title}
                                     />
                                 </Link>

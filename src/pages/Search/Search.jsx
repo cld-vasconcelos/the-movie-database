@@ -1,4 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import config from "../../config";
 import { GetMovies } from "../../helpers/movies";
 
 import "./Search.css";
@@ -30,7 +31,7 @@ export default function Search() {
                             <li onClick={() => { redirectTo(movie.id) }}>
                                 <div className="search-result-poster">
                                     <img
-                                        src={"https://image.tmdb.org/t/p/original" + movie.poster_path}
+                                        src={`${config.imageBaseUrl}${movie.poster_path}`}
                                         alt={movie.title}
                                     />
                                 </div>

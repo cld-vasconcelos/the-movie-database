@@ -1,8 +1,8 @@
-const baseUrl = "https://api.themoviedb.org/3";
-const apiKey = "api_key=4ac15274164d3710a133b4a3023705c6";
+import config from "../config.js"
 
 export async function GetTopMovies() {
-    const url = `${baseUrl}/movie/popular?${apiKey}&language=en-US&page=1`;
+    console.log();
+    const url = `${config.api.baseUrl}/movie/popular?${config.api.apiKey}&language=en-US&page=1`;
     return fetch(url, {
         method: "GET",
         header: {
@@ -14,7 +14,7 @@ export async function GetTopMovies() {
 }
 
 export async function GetMovies(q) {
-    const url = `${baseUrl}/search/movie?${apiKey}&language=en-US&query=${q}&page=1&include_adult=false`;
+    const url = `${config.api.baseUrl}/search/movie?${config.api.apiKey}&language=en-US&query=${q}&page=1&include_adult=false`;
     return fetch(url, {
         method: "GET",
         header: {
@@ -26,7 +26,7 @@ export async function GetMovies(q) {
 }
 
 export async function GetMovie(movieId) {
-    return fetch(`${baseUrl}/movie/${movieId}?${apiKey}`, {
+    return fetch(`${config.api.baseUrl}/movie/${movieId}?${config.api.apiKey}`, {
         method: "GET",
         header: {
             "Content-Type": "application/json"
@@ -36,7 +36,7 @@ export async function GetMovie(movieId) {
 }
 
 export async function GetMovieCredits(movieId) {
-    return fetch(`${baseUrl}/movie/${movieId}/credits?${apiKey}`, {
+    return fetch(`${config.api.baseUrl}/movie/${movieId}/credits?${config.api.apiKey}`, {
         method: "GET",
         header: {
             "Content-Type": "application/json"

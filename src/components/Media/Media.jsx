@@ -1,3 +1,4 @@
+import config from '../../config';
 import './Media.css';
 
 export default function Media(props) {
@@ -14,7 +15,7 @@ export default function Media(props) {
             <div className="media-wrapper">
                 <div className="media-poster">
                     <img
-                        src={"https://image.tmdb.org/t/p/original" + media.poster_path}
+                        src={`${config.imageBaseUrl}${media.poster_path}`}
                         className="media-poster"
                         alt={title}
                     />
@@ -57,7 +58,7 @@ export default function Media(props) {
                                     <li>
                                         <div className="media-cast-profile">
                                             <img
-                                                src={"https://image.tmdb.org/t/p/original" + cast.profile_path}
+                                                src={`${config.imageBaseUrl}${cast.profile_path}`}
                                                 alt={cast.name}
                                             />
                                         </div>
