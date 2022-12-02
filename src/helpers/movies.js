@@ -24,3 +24,13 @@ export async function GetMovie(movieId) {
     })
         .then(response => response.json())
 }
+
+export async function GetMovieCredits(movieId) {
+    return fetch(`${baseUrl}/movie/${movieId}/credits?${apiKey}`, {
+        method: "GET",
+        header: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+}
