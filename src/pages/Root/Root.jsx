@@ -7,7 +7,7 @@ export default function Root() {
     return (
         <>
             <Header />
-            <div className="content">
+            <div className="root-wrapper">
                 <Outlet />
             </div>
         </>
