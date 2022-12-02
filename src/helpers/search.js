@@ -9,5 +9,5 @@ export async function SearchMedia(q) {
         }
     })
         .then(response => response.json())
-        .then(response => response.results.filter(result => result.media_type).slice(0, 5));
+        .then(response => response.results.filter(result => ["movie", "tv"].indexOf(result.media_type) > -1).slice(0, 5));
 }

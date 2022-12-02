@@ -26,17 +26,17 @@ export default function Search() {
             <div className="search-wrapper">
                 <h3>Search '{q}'</h3>
                 <div className="search-results">
-                    <ul>
+                    {results.length > 0 ? (<ul>
                         {results.map((movie) => (
-                            <li onClick={() => { redirectTo(movie) }}>
+                            <li key={movie.id} onClick={() => { redirectTo(movie) }}>
                                 <div className="search-result-poster">
                                     <img
                                         src={`${config.imageBaseUrl}${movie.poster_path}`}
                                         alt={movie.media_type === "tv" ? movie.name : movie.title}
                                     />
                                 </div>
-                                <div class="search-result-info-wrapper">
-                                    <div class="search-result-info vertically-centered">
+                                <div className="search-result-info-wrapper">
+                                    <div className="search-result-info vertically-centered">
                                         <span className="search-result-name">
                                             {movie.media_type === "tv" ? movie.name : movie.title}
                                         </span>
@@ -47,7 +47,11 @@ export default function Search() {
                                 </div>
                             </li>
                         ))}
-                    </ul>
+                    </ul>) : (
+                        <p>
+                            No results
+                        </p>
+                    )}
                 </div>
             </div>
         </>

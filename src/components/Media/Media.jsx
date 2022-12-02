@@ -24,7 +24,7 @@ export default function Media(props) {
                     <div className="media-title">
                         {title}
                     </div>
-                    <div class="media-overview">
+                    <div className="media-overview">
                         <div className="media-details">
                             <ul>
                                 {details.map((detail) => (
@@ -62,7 +62,7 @@ export default function Media(props) {
                                                 alt={cast.name}
                                             />
                                         </div>
-                                        <div class="media-cast-info">
+                                        <div className="media-cast-info">
                                             <span className="media-cast-name">
                                                 {cast.name}
                                             </span>
