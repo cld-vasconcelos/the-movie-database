@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import { Form } from 'react-router-dom';
 import './Header.css';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { useNavigate } from "react-router-dom"
 
 export default function Header() {
@@ -37,10 +33,7 @@ export default function Header() {
                 <div className="header-search">
                     <div className="header-element-center header-search-input">
                         <form onSubmit={handleSubmit}>
-                            <label>
-                                Name:
-                                <input type="text" value={query} onChange={handleChange} />
-                            </label>
+                        <input type="text" placeholder="Search" value={query} onChange={handleChange} />
                         </form>
                     </div>
                 </div>
