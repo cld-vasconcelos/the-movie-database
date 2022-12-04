@@ -4,7 +4,7 @@ export async function ApiGet(route, params) {
     const requestParams = [
         {
             key: "api_key",
-            value: "4ac15274164d3710a133b4a3023705c6"
+            value: config.api.apiKey
         },
         {
             key: "language",
@@ -12,7 +12,7 @@ export async function ApiGet(route, params) {
         },
         ...params
     ];
-    const url = `${config.api.baseUrl}${route}?${requestParams.join("&")}`;
+    const url = `${config.api.baseUrl}${route}?${requestParams.map((param) => `${param.key}=${param.value}`).join("&")}`;
     return fetch(url, {
         method: "GET",
         header: {
