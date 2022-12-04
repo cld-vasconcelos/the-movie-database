@@ -48,7 +48,7 @@ export default function Show() {
 
     return (
         <>
-            <Media media={show} title={title} details={details} credits={credits} />
+            <Media media={show} title={title} mediaType={mediaType} details={details} credits={credits} />
         </>
     );
 }

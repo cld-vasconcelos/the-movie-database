@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import config from '../../config';
 import './Media.css';
 
@@ -9,22 +8,19 @@ export default function Media(props) {
     const details = props.details;
 
     const credits = props.credits;
-    const director = credits.crew.find(crew => crew.job === "Director");
     const topCast = credits.cast.slice(0, 5);
-
-
-    const directors = [];
+    const topCrew = [];
     switch (mediaType) {
         case "movie":
-            directors.push(...credits.crew.filter(crew => crew.job === "Director"));
+            topCrew.push({ job: "Director", elements: credits.crew.filter(crew => crew.job === "Director") });
             break;
-        case "show":
+        case "tv":
+            topCrew.push({ job: "Creator", elements: media.created_by });
             break;
         default:
             break;
     }
 
-    console.log(directors);
     return (
         <>
             <div className="media-wrapper">
@@ -55,21 +51,26 @@ export default function Media(props) {
                             </ul>
                         </div>
                         <div className="media-credits">
-                            {directors.length > 0 ? (<div className="media-credits-crew">
-                                <div className="media-director">
-                                    <div>
-                                        <b>Director{directors.length > 1 ? "s" : ""}</b>
-                                    </div>
-                                    <div>
-                                        {directors.map((director, index) => (
-                                            <>
-                                                <span>{director.name}</span>
-                                                {index < directors.length - 1 ? " • " : ""}
-                                            </>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>) : ""}
+                            {topCrew.length > 0 ? (
+                                <div className="media-credits-crew">
+                                    {topCrew.map((crew) => (
+                                        <>
+                                            <div className="media-crew-element">
+                                                <div>
+                                                    <b>{crew.job}{crew.elements.length > 1 ? "s" : ""}</b>
+                                                </div>
+                                                <div>
+                                                    {crew.elements.map((element, index) => (
+                                                        <>
+                                                            <span>{element.name}</span>
+                                                            {index < crew.elements.length - 1 ? " • " : ""}
+                                                        </>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </>
+                                    ))}
+                                </div>) : ""}
                             <div>
                                 {credits.cast.length > 0 ? (
                                     <>
