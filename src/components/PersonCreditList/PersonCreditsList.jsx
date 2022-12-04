@@ -1,9 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import config from "../../config";
 import "./PersonCreditList.css";
 
 export default function PersonCreditList(props) {
     const type = props.type;
     const credits = props.credits;
+    
+    const navigate = useNavigate();
+    const redirectToMedia = (media) => {
+        navigate(`/${media.media_type}/${media.id}`);
+    };
+
     return (
         <>
             <div className="person-credit-list">
@@ -14,7 +21,7 @@ export default function PersonCreditList(props) {
                         </div>
                         <ul>
                             {credits.map((credit) => (
-                                <li key={credit.credit_id}>
+                                <li key={credit.credit_id} onClick={() => redirectToMedia(credit)}>
                                     <div className="person-credit-poster">
                                         <img
                                             src={`${config.imageBaseUrl}${credit.poster_path}`}

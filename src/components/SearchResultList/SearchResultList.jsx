@@ -2,12 +2,11 @@ import { useNavigate } from "react-router-dom";
 import config from "../../config";
 
 export default function SearchResultList(props) {
-    const navigate = useNavigate();
-
     const category = props.category
     const results = props.results;
     const mediaType = props.mediaType;
 
+    const navigate = useNavigate();
     const redirectTo = (movie, mediaType) => {
         navigate(`/${mediaType}/${movie.id}`)
     }
