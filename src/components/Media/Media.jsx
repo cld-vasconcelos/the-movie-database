@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 import PersonCreditList from '../PersonCreditList/PersonCreditsList';
 import './Media.css';
@@ -23,11 +23,13 @@ export default function Media(props) {
             break;
     }
 
-    const personCast = props.credits
-        .cast?.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1);
+    const personCast = mediaType === "person"
+        ? credits.cast.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1)
+        : [];
 
-    const personCrew = props.credits
-        .crew?.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1);
+    const personCrew = mediaType === "person"
+        ? credits.crew.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1)
+        : [];
 
     const navigate = useNavigate();
     const redirectToPerson = (personId) => {
@@ -37,7 +39,6 @@ export default function Media(props) {
     return (
         <>
             <div className="media-wrapper">
-
                 <div className="aaa">
                     <div className="media-poster">
                         <img
@@ -70,39 +71,43 @@ export default function Media(props) {
                 </div>
                 <div className="credits">
                     <h4>Credits</h4>
-
-
                     {mediaType === "person" ? (
                         <div className="person-credits">
-                            <div className="person-cast">
-                                <PersonCreditList type="cast" credits={personCast} />
-                            </div>
-                            <div className="person-crew">
-                                <PersonCreditList type="crew" credits={personCrew} />
-                            </div>
+                            {personCast.length > 0 ? (
+                                <div className="person-cast">
+                                    <PersonCreditList type="cast" credits={personCast} />
+                                </div>
+                            ) : ""}
+                            {personCrew.length > 0 ? (
+                                <div className="person-crew">
+                                    <PersonCreditList type="crew" credits={personCrew} />
+                                </div>
+                            ) : ""}
                         </div>
                     ) : (
                         <div className="media-credits">
-                            {topCrew.length > 0 ? (
-                                <div className="media-credits-crew">
-                                    {topCrew.map((crew) => (
-                                        <>
-                                            <div className="media-crew-element">
+                            <div>
+                                {topCrew.length > 0 ? (
+                                    <div className="media-credits-crew">
+                                        {topCrew.map((crew) => (
+                                            <div key={crew.job} className="media-crew-element" >
+
+
                                                 <div>
                                                     <b>{crew.job}{crew.elements.length > 1 ? "s" : ""}</b>
                                                 </div>
                                                 <div>
                                                     {crew.elements.map((element, index) => (
-                                                        <>
-                                                            <span>{element.name}</span>
+                                                        <div key={element.id}>
+                                                            <Link to={`/person/${element.id}`}>{element.name}</Link>
                                                             {index < crew.elements.length - 1 ? " • " : ""}
-                                                        </>
+                                                        </div>
                                                     ))}
                                                 </div>
                                             </div>
-                                        </>
-                                    ))}
-                                </div>) : ""}
+                                        ))}
+                                    </div>) : ""}
+                            </div>
                             <div>
                                 {topCast?.length > 0 ? (
                                     <>
@@ -134,11 +139,7 @@ export default function Media(props) {
                             </div>
                         </div>
                     )}
-
-
-
                 </div>
-                <h4>Credits</h4>
             </div>
         </>
     );

@@ -4,6 +4,7 @@
 
 .aaa {
     display: inline-flex;
+    margin-bottom: 2rem;
 }
 
 .media-poster img {
@@ -32,16 +33,15 @@
     padding-bottom: 1rem;
 }
 
+.media-details li:last-child {
+    padding-bottom: 0;
+}
+
 .info-title {
     font-weight: bold;
 }
 
 .media-credits {
-    padding: 1rem 0;
-}
-
-.media-credits ul {
-    list-style-type: none;
     padding: 1rem 0;
 }
 
