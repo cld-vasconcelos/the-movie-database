@@ -91,6 +91,30 @@
 
 
 
+.person-credits {
+    padding: 1rem 0;
+    display: flex;
+}
+
+.person-cast {
+    width: 50%;
+}
+
+.person-crew {
+    width: 50%;
+}
+
+.person-credits li {
+    display: flex;
+    padding: .5rem;
+}
+
+.person-credits li:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+
 
 .person-cast-profile {
     width: 3rem;

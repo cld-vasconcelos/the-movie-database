@@ -22,9 +22,12 @@ export default function Media(props) {
             break;
     }
 
-    const personCast = props.credits.cast;
-    
-    console.log(personCast);
+    const personCast = props.credits
+        .cast?.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1);
+
+    const personCrew = props.credits
+        .crew?.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1);
+
     const navigate = useNavigate();
     const redirectToPerson = (personId) => {
         navigate(`/person/${personId}`)
@@ -85,7 +88,7 @@ export default function Media(props) {
                                 </>
                             ))}
                         </div>) : ""}
-                        <div>
+                    <div>
                         {topCast?.length > 0 ? (
                             <>
                                 <div>
@@ -120,7 +123,14 @@ export default function Media(props) {
 
 
 
-                    <div>
+
+                </div>
+
+
+
+
+                <div className="person-credits">
+                    <div className="person-cast">
                         {personCast?.length > 0 ? (
                             <>
                                 <div>
@@ -129,21 +139,21 @@ export default function Media(props) {
                                 <ul>
                                     {personCast.map((media) => (
                                         <li key={media.credit_id}>
-                                             <div className="person-cast-profile">
+                                            <div className="person-cast-profile">
                                                 <img
                                                     src={`${config.imageBaseUrl}${media.poster_path}`}
                                                     alt={media.media_type === "movie" ? media.title : media.name}
                                                 />
                                             </div>
                                             <div className="person-cast-info">
-                                               <div className="vertically-centered">
-                                               <span className="person-cast-name">
-                                                    {media.media_type === "movie" ? media.title : media.name}
-                                                </span>
-                                                <span className="person-cast-role">
-                                                    {media.character}
-                                                </span>
-                                               </div>
+                                                <div className="vertically-centered">
+                                                    <span className="person-cast-name">
+                                                        {media.media_type === "movie" ? media.title : media.name}
+                                                    </span>
+                                                    <span className="person-cast-role">
+                                                        {media.character}
+                                                    </span>
+                                                </div>
                                             </div>
                                         </li>
                                     ))}
@@ -153,7 +163,44 @@ export default function Media(props) {
                     </div>
 
 
+                    <div className="person-crew">
+                        {personCrew?.length > 0 ? (
+                            <>
+                                <div>
+                                    <b>Crew credits</b>
+                                </div>
+                                <ul>
+                                    {personCrew.map((media) => (
+                                        <li key={media.credit_id}>
+                                            <div className="person-cast-profile">
+                                                <img
+                                                    src={`${config.imageBaseUrl}${media.poster_path}`}
+                                                    alt={media.media_type === "movie" ? media.title : media.name}
+                                                />
+                                            </div>
+                                            <div className="person-cast-info">
+                                                <div className="vertically-centered">
+                                                    <span className="person-cast-name">
+                                                        {media.media_type === "movie" ? media.title : media.name}
+                                                    </span>
+                                                    <span className="person-cast-role">
+                                                        {media.character}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        ) : ""}
+
+                    </div>
+
                 </div>
+
+
+
+
             </div>
         </>
     );
