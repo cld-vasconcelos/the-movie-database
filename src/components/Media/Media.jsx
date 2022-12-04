@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import config from '../../config';
+import PersonCreditList from '../PersonCreditList/PersonCreditsList';
 import './Media.css';
 
 export default function Media(props) {
@@ -67,140 +68,77 @@ export default function Media(props) {
                         </div>
                     </div>
                 </div>
-                <div className="media-credits">
-                    {topCrew.length > 0 ? (
-                        <div className="media-credits-crew">
-                            {topCrew.map((crew) => (
-                                <>
-                                    <div className="media-crew-element">
+                <div className="credits">
+                    <h4>Credits</h4>
+
+
+                    {mediaType === "person" ? (
+                        <div className="person-credits">
+                            <div className="person-cast">
+                                <PersonCreditList type="cast" credits={personCast} />
+                            </div>
+                            <div className="person-crew">
+                                <PersonCreditList type="crew" credits={personCrew} />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="media-credits">
+                            {topCrew.length > 0 ? (
+                                <div className="media-credits-crew">
+                                    {topCrew.map((crew) => (
+                                        <>
+                                            <div className="media-crew-element">
+                                                <div>
+                                                    <b>{crew.job}{crew.elements.length > 1 ? "s" : ""}</b>
+                                                </div>
+                                                <div>
+                                                    {crew.elements.map((element, index) => (
+                                                        <>
+                                                            <span>{element.name}</span>
+                                                            {index < crew.elements.length - 1 ? " • " : ""}
+                                                        </>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </>
+                                    ))}
+                                </div>) : ""}
+                            <div>
+                                {topCast?.length > 0 ? (
+                                    <>
                                         <div>
-                                            <b>{crew.job}{crew.elements.length > 1 ? "s" : ""}</b>
+                                            <b>Cast</b>
                                         </div>
-                                        <div>
-                                            {crew.elements.map((element, index) => (
-                                                <>
-                                                    <span>{element.name}</span>
-                                                    {index < crew.elements.length - 1 ? " • " : ""}
-                                                </>
+                                        <ul>
+                                            {topCast.map((cast) => (
+                                                <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
+                                                    <div className="media-cast-profile">
+                                                        <img
+                                                            src={`${config.imageBaseUrl}${cast.profile_path}`}
+                                                            alt={cast.name}
+                                                        />
+                                                    </div>
+                                                    <div className="media-cast-info">
+                                                        <span className="media-cast-name">
+                                                            {cast.name}
+                                                        </span>
+                                                        <span className="media-cast-role">
+                                                            {cast.character}
+                                                        </span>
+                                                    </div>
+                                                </li>
                                             ))}
-                                        </div>
-                                    </div>
-                                </>
-                            ))}
-                        </div>) : ""}
-                    <div>
-                        {topCast?.length > 0 ? (
-                            <>
-                                <div>
-                                    <b>Cast</b>
-                                </div>
-                                <ul>
-                                    {topCast.map((cast) => (
-                                        <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
-                                            <div className="media-cast-profile">
-                                                <img
-                                                    src={`${config.imageBaseUrl}${cast.profile_path}`}
-                                                    alt={cast.name}
-                                                />
-                                            </div>
-                                            <div className="media-cast-info">
-                                                <span className="media-cast-name">
-                                                    {cast.name}
-                                                </span>
-                                                <span className="media-cast-role">
-                                                    {cast.character}
-                                                </span>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        ) : ""}
-                    </div>
-
-
-
-
+                                        </ul>
+                                    </>
+                                ) : ""}
+                            </div>
+                        </div>
+                    )}
 
 
 
                 </div>
-
-
-
-
-                <div className="person-credits">
-                    <div className="person-cast">
-                        {personCast?.length > 0 ? (
-                            <>
-                                <div>
-                                    <b>Cast credits</b>
-                                </div>
-                                <ul>
-                                    {personCast.map((media) => (
-                                        <li key={media.credit_id}>
-                                            <div className="person-cast-profile">
-                                                <img
-                                                    src={`${config.imageBaseUrl}${media.poster_path}`}
-                                                    alt={media.media_type === "movie" ? media.title : media.name}
-                                                />
-                                            </div>
-                                            <div className="person-cast-info">
-                                                <div className="vertically-centered">
-                                                    <span className="person-cast-name">
-                                                        {media.media_type === "movie" ? media.title : media.name}
-                                                    </span>
-                                                    <span className="person-cast-role">
-                                                        {media.character}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        ) : ""}
-                    </div>
-
-
-                    <div className="person-crew">
-                        {personCrew?.length > 0 ? (
-                            <>
-                                <div>
-                                    <b>Crew credits</b>
-                                </div>
-                                <ul>
-                                    {personCrew.map((media) => (
-                                        <li key={media.credit_id}>
-                                            <div className="person-cast-profile">
-                                                <img
-                                                    src={`${config.imageBaseUrl}${media.poster_path}`}
-                                                    alt={media.media_type === "movie" ? media.title : media.name}
-                                                />
-                                            </div>
-                                            <div className="person-cast-info">
-                                                <div className="vertically-centered">
-                                                    <span className="person-cast-name">
-                                                        {media.media_type === "movie" ? media.title : media.name}
-                                                    </span>
-                                                    <span className="person-cast-role">
-                                                        {media.character}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
-                        ) : ""}
-
-                    </div>
-
-                </div>
-
-
-
-
+                <h4>Credits</h4>
             </div>
         </>
     );
