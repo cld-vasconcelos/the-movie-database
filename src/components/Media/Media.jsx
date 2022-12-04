@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import config from '../../config';
 import './Media.css';
 
@@ -8,7 +9,7 @@ export default function Media(props) {
     const details = props.details;
 
     const credits = props.credits;
-    const topCast = credits.cast.slice(0, 5);
+    const topCast = credits.cast?.slice(0, 5);
     const topCrew = [];
     switch (mediaType) {
         case "movie":
@@ -21,12 +22,17 @@ export default function Media(props) {
             break;
     }
 
+    const navigate = useNavigate();
+    const redirectToPerson = (personId) => {
+        navigate(`/person/${personId}`)
+    }
+
     return (
         <>
             <div className="media-wrapper">
                 <div className="media-poster">
                     <img
-                        src={`${config.imageBaseUrl}${media.poster_path}`}
+                        src={`${config.imageBaseUrl}${media.poster_path || media.profile_path}`}
                         className="media-poster"
                         alt={title}
                     />
@@ -72,14 +78,14 @@ export default function Media(props) {
                                     ))}
                                 </div>) : ""}
                             <div>
-                                {credits.cast.length > 0 ? (
+                                {credits.cast?.length > 0 ? (
                                     <>
                                         <div>
                                             <b>Cast</b>
                                         </div>
                                         <ul>
                                             {topCast.map((cast) => (
-                                                <li key={cast.id}>
+                                                <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
                                                     <div className="media-cast-profile">
                                                         <img
                                                             src={`${config.imageBaseUrl}${cast.profile_path}`}

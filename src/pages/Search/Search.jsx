@@ -23,7 +23,7 @@ export default function Search() {
             <div className="search-wrapper">
                 <h3>Search '{q}'</h3>
                 <SearchResultList mediaType="movie" category="Movies" results={movieResults} />
-                <SearchResultList mediaType="tv" category="Show" results={showResults} />
+                <SearchResultList mediaType="tv" category="Shows" results={showResults} />
             </div>
         </>
     );

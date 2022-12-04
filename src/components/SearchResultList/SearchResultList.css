@@ -1,0 +1,40 @@
+.search-category {
+    padding: .5rem 1rem;
+}
+
+.search-results li {
+    display: flex;
+    padding: .5rem 1rem;
+}
+
+.search-results li:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.search-result-poster {
+    width: 4rem;
+}
+
+.search-result-poster img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.search-result-info-wrapper {
+    position: relative;
+    width: 100%;
+    padding-left: 2rem;
+}
+
+.search-result-info span {
+    display: block;
+}
+
+.search-result-year {
+    color: #757575
+}
+
+.no-results {
+    padding: 0 2rem
+}

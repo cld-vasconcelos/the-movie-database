@@ -46,7 +46,12 @@
 
 .media-credits li {
     display: flex;
-    padding-bottom: 1rem;
+    padding: 1rem;
+}
+
+.media-credits li:hover {
+    background-color: gainsboro;
+    cursor: pointer;
 }
 
 .media-credits-crew {
