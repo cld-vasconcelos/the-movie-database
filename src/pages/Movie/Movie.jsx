@@ -23,6 +23,7 @@ export async function loader({ params }) {
 export default function Movie() {
     const { movie, credits } = useLoaderData();
     const title = movie.title;
+    const mediaType = "movie";
     const details = [
         {
             key: "synopsys",
@@ -43,7 +44,7 @@ export default function Movie() {
 
     return (
         <>
-            <Media media={movie} title={title} details={details} credits={credits} />
+            <Media media={movie} title={title} mediaType={mediaType} details={details} credits={credits} />
         </>
     );
 }

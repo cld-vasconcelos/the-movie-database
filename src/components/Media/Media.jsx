@@ -1,15 +1,30 @@
+import { useState } from 'react';
 import config from '../../config';
 import './Media.css';
 
 export default function Media(props) {
     const media = props.media;
     const title = props.title;
+    const mediaType = props.mediaType;
     const details = props.details;
 
     const credits = props.credits;
     const director = credits.crew.find(crew => crew.job === "Director");
     const topCast = credits.cast.slice(0, 5);
 
+
+    const directors = [];
+    switch (mediaType) {
+        case "movie":
+            directors.push(...credits.crew.filter(crew => crew.job === "Director"));
+            break;
+        case "show":
+            break;
+        default:
+            break;
+    }
+
+    console.log(directors);
     return (
         <>
             <div className="media-wrapper">
@@ -40,13 +55,18 @@ export default function Media(props) {
                             </ul>
                         </div>
                         <div className="media-credits">
-                            {director ? (<div className="media-credits-crew">
+                            {directors.length > 0 ? (<div className="media-credits-crew">
                                 <div className="media-director">
                                     <div>
-                                        <b>Director</b>
+                                        <b>Director{directors.length > 1 ? "s" : ""}</b>
                                     </div>
                                     <div>
-                                        {director.name}
+                                        {directors.map((director, index) => (
+                                            <>
+                                                <span>{director.name}</span>
+                                                {index < directors.length - 1 ? " • " : ""}
+                                            </>
+                                        ))}
                                     </div>
                                 </div>
                             </div>) : ""}
@@ -58,7 +78,7 @@ export default function Media(props) {
                                         </div>
                                         <ul>
                                             {topCast.map((cast) => (
-                                                <li>
+                                                <li key={cast.id}>
                                                     <div className="media-cast-profile">
                                                         <img
                                                             src={`${config.imageBaseUrl}${cast.profile_path}`}

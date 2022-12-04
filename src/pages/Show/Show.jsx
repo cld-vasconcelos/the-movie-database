@@ -22,6 +22,7 @@ export async function loader({ params }) {
 export default function Show() {
     const { show, credits } = useLoaderData();
     const title = show.name;
+    const mediaType = "tv";
     const details = [
         {
             key: "synopsys",
