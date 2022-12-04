@@ -1,12 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Media from "../../components/Media/Media";
-import { GetPerson } from "../../helpers/people";
+import { GetPerson, GetPersonCredits } from "../../helpers/people";
 import Moment from "moment";
 
 export async function loader({ params }) {
     const person = await GetPerson(params.personId);
 
-    console.log(params.personId);
     if (person.success === false) { //'person' only has 'success' property when the request fails, since this condition
         throw new Response("", {
             status: 404,
@@ -14,11 +13,13 @@ export async function loader({ params }) {
         });
     }
 
-    return person;
+    const credits = await GetPersonCredits(params.personId);
+
+    return { person, credits };
 }
 
 export default function Person() {
-    const person = useLoaderData();
+    const { person, credits } = useLoaderData();
     const title = person.name;
     const mediaType = "person";
     const details = [
@@ -42,10 +43,10 @@ export default function Person() {
         });
     }
 
+    console.log(credits);
     return (
         <>
-            <Media media={person} title={title} mediaType={mediaType} details={details} credits={[]} />
+            <Media media={person} title={title} mediaType={mediaType} details={details} credits={credits} />
         </>
     );
-
 }

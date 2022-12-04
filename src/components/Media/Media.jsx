@@ -9,7 +9,7 @@ export default function Media(props) {
     const details = props.details;
 
     const credits = props.credits;
-    const topCast = credits.cast?.slice(0, 5);
+    const topCast = ["movie", "tv"].indexOf(mediaType) > -1 ? credits.cast.slice(0, 5) : [];
     const topCrew = [];
     switch (mediaType) {
         case "movie":
@@ -22,6 +22,9 @@ export default function Media(props) {
             break;
     }
 
+    const personCast = props.credits.cast;
+    
+    console.log(personCast);
     const navigate = useNavigate();
     const redirectToPerson = (personId) => {
         navigate(`/person/${personId}`)
@@ -31,7 +34,7 @@ export default function Media(props) {
         <>
             <div className="media-wrapper">
 
-                <div class="aaa">
+                <div className="aaa">
                     <div className="media-poster">
                         <img
                             src={`${config.imageBaseUrl}${media.poster_path || media.profile_path}`}
@@ -59,15 +62,8 @@ export default function Media(props) {
                                 </ul>
                             </div>
                         </div>
-
-
-
-
                     </div>
-
-
                 </div>
-
                 <div className="media-credits">
                     {topCrew.length > 0 ? (
                         <div className="media-credits-crew">
@@ -89,8 +85,8 @@ export default function Media(props) {
                                 </>
                             ))}
                         </div>) : ""}
-                    <div>
-                        {credits.cast?.length > 0 ? (
+                        <div>
+                        {topCast?.length > 0 ? (
                             <>
                                 <div>
                                     <b>Cast</b>
@@ -118,10 +114,46 @@ export default function Media(props) {
                             </>
                         ) : ""}
                     </div>
+
+
+
+
+
+
+                    <div>
+                        {personCast?.length > 0 ? (
+                            <>
+                                <div>
+                                    <b>Cast credits</b>
+                                </div>
+                                <ul>
+                                    {personCast.map((media) => (
+                                        <li key={media.credit_id}>
+                                             <div className="person-cast-profile">
+                                                <img
+                                                    src={`${config.imageBaseUrl}${media.poster_path}`}
+                                                    alt={media.media_type === "movie" ? media.title : media.name}
+                                                />
+                                            </div>
+                                            <div className="person-cast-info">
+                                               <div className="vertically-centered">
+                                               <span className="person-cast-name">
+                                                    {media.media_type === "movie" ? media.title : media.name}
+                                                </span>
+                                                <span className="person-cast-role">
+                                                    {media.character}
+                                                </span>
+                                               </div>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        ) : ""}
+                    </div>
+
+
                 </div>
-
-
-
             </div>
         </>
     );

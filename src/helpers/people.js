@@ -5,3 +5,14 @@ export async function GetPerson(personId) {
     const params = [];
     return ApiGet(route, params);
 }
+
+export async function GetPersonCredits(personId) {
+    const route = `/person/${personId}/combined_credits`;
+    const params = [
+        {
+            key: "page",
+            value: "1"
+        }
+    ];
+    return ApiGet(route, params);
+}
