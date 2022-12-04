@@ -1,45 +1,36 @@
-import config from "../config.js"
+import { ApiGet } from "../service/api.js";
 
 export async function GetTopMovies() {
-    const url = `${config.api.baseUrl}/movie/popular?${config.api.apiKey}&language=en-US&page=1`;
-    return fetch(url, {
-        method: "GET",
-        header: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
-        .then(response => response.results.slice(0, 5))
+    const route = "/movie/popular";
+    const params = [{ key: "page", value: "1" }];
+    return ApiGet(route, params)
+        .then(response => response.results.slice(0, 5));
 }
 
 export async function SearchMovies(q) {
-    const url = `${config.api.baseUrl}/search/movie?${config.api.apiKey}&language=en-US&query=${q}&page=1&include_adult=false`;
-    return fetch(url, {
-        method: "GET",
-        header: {
-            "Content-Type": "application/json"
+    const route = "/search/movie";
+    const params = [
+        { 
+            key: "query", 
+            value: q 
+        },
+        { 
+            key: "page", 
+            value: "1" 
         }
-    })
-        .then(response => response.json())
-        .then(response => response.results.slice(0, 5))
+    ];
+    return ApiGet(route, params)
+        .then(response => response.results.slice(0, 5));
 }
 
 export async function GetMovie(movieId) {
-    return fetch(`${config.api.baseUrl}/movie/${movieId}?${config.api.apiKey}`, {
-        method: "GET",
-        header: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
+    const route = `/movie/${movieId}`;
+    const params = [];
+    return ApiGet(route, params);
 }
 
 export async function GetMovieCredits(movieId) {
-    return fetch(`${config.api.baseUrl}/movie/${movieId}/credits?${config.api.apiKey}`, {
-        method: "GET",
-        header: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
+    const route = `/movie/${movieId}/credits`;
+    const params = [];
+    return ApiGet(route, params);
 }
