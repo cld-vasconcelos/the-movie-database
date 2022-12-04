@@ -1,5 +1,8 @@
 .media-wrapper {
     width: 100%;
+}
+
+.aaa {
     display: inline-flex;
 }
 
@@ -23,7 +26,6 @@
 
 .media-details {
     margin-right: 2rem;
-    width: 50%;
 }
 
 .media-details li {
@@ -35,8 +37,7 @@
 }
 
 .media-credits {
-    margin-left: 2rem;
-    width: 50%;
+    padding: 1rem 0;
 }
 
 .media-credits ul {
