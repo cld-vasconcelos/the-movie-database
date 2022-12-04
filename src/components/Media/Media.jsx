@@ -51,28 +51,34 @@ export default function Media(props) {
                                 </div>
                             </div>) : ""}
                             <div>
-                                <b>Cast</b>
+                                {credits.cast.length > 0 ? (
+                                    <>
+                                        <div>
+                                            <b>Cast</b>
+                                        </div>
+                                        <ul>
+                                            {topCast.map((cast) => (
+                                                <li>
+                                                    <div className="media-cast-profile">
+                                                        <img
+                                                            src={`${config.imageBaseUrl}${cast.profile_path}`}
+                                                            alt={cast.name}
+                                                        />
+                                                    </div>
+                                                    <div className="media-cast-info">
+                                                        <span className="media-cast-name">
+                                                            {cast.name}
+                                                        </span>
+                                                        <span className="media-cast-role">
+                                                            {cast.character}
+                                                        </span>
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                ) : ""}
                             </div>
-                            <ul>
-                                {topCast.map((cast) => (
-                                    <li>
-                                        <div className="media-cast-profile">
-                                            <img
-                                                src={`${config.imageBaseUrl}${cast.profile_path}`}
-                                                alt={cast.name}
-                                            />
-                                        </div>
-                                        <div className="media-cast-info">
-                                            <span className="media-cast-name">
-                                                {cast.name}
-                                            </span>
-                                            <span className="media-cast-role">
-                                                {cast.character}
-                                            </span>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </div>
                 </div>

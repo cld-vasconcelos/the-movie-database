@@ -7,7 +7,7 @@ export default function TopPick(props) {
 
     return (
         <div className="top-picks-wrapper">
-            <h3> Top {props.type ? `${props.type}s` : "Picks"} </h3>
+            <h3> Top {props.mediaType ? `${props.mediaType === "tv" ? "TV" : "Movies"}` : "Picks"} </h3>
             <div className='top-picks'>
                 {picks.length ? (
                     <ul>
