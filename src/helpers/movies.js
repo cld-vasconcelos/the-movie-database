@@ -12,6 +12,18 @@ export async function GetTopMovies() {
         .then(response => response.results.slice(0, 5))
 }
 
+export async function SearchMovies(q) {
+    const url = `${config.api.baseUrl}/search/movie?${config.api.apiKey}&language=en-US&query=${q}&page=1&include_adult=false`;
+    return fetch(url, {
+        method: "GET",
+        header: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => response.json())
+        .then(response => response.results.slice(0, 5))
+}
+
 export async function GetMovie(movieId) {
     return fetch(`${config.api.baseUrl}/movie/${movieId}?${config.api.apiKey}`, {
         method: "GET",

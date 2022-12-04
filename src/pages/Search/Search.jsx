@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import config from "../../config";
-import { SearchMedia } from "../../helpers/search";
+import { SearchMovies } from "../../helpers/movies";
+import { SearchShows } from "../../helpers/shows";
 
 import "./Search.css";
 
@@ -8,51 +9,83 @@ export async function loader({ request }) {
     const url = new URL(request.url);
     const q = url.searchParams.get("q");
 
-    const results = await SearchMedia(q);
+    const movieResults = await SearchMovies(q);
+    const showResults = await SearchShows(q);
 
-    return { q, results };
+    return { q, movieResults, showResults };
 }
 
 export default function Search() {
-    const { q, results } = useLoaderData();
+    const { q, movieResults, showResults } = useLoaderData();
     const navigate = useNavigate();
 
-    const redirectTo = (movie) => {
-        navigate(`/${movie.media_type}/${movie.id}`)
+    const redirectTo = (movie, mediaType) => {
+        navigate(`/${mediaType}/${movie.id}`)
     }
 
     return (
         <>
             <div className="search-wrapper">
                 <h3>Search '{q}'</h3>
+                <h4 className="search-category">Movies</h4>
                 <div className="search-results">
-                    {results.length > 0 ? (<ul>
-                        {results.map((movie) => (
-                            <li key={movie.id} onClick={() => { redirectTo(movie) }}>
+                    {movieResults.length > 0 ? (<ul>
+                        {movieResults.map((result) => (
+                            <li key={result.id} onClick={() => { redirectTo(result, "movie") }}>
                                 <div className="search-result-poster">
                                     <img
-                                        src={`${config.imageBaseUrl}${movie.poster_path}`}
-                                        alt={movie.media_type === "tv" ? movie.name : movie.title}
+                                        src={`${config.imageBaseUrl}${result.poster_path}`}
+                                        alt={result.title}
                                     />
                                 </div>
                                 <div className="search-result-info-wrapper">
                                     <div className="search-result-info vertically-centered">
                                         <span className="search-result-name">
-                                            {movie.media_type === "tv" ? movie.name : movie.title}
+                                            {result.title}
                                         </span>
                                         <span className="search-result-year">
-                                            {(movie.media_type === "tv" ? movie.first_air_date : movie.release_date).split("-")[0]}
+                                            {result.release_date.split("-")[0]}
                                         </span>
                                     </div>
                                 </div>
                             </li>
                         ))}
                     </ul>) : (
-                        <p>
+                        <div className="no-results">
                             No results
-                        </p>
+                        </div>
                     )}
                 </div>
+                <h4 className="search-category">Shows</h4>
+                <div className="search-results">
+                    {showResults.length > 0 ? (<ul>
+                        {showResults.map((result) => (
+                            <li key={result.id} onClick={() => { redirectTo(result, "tv") }}>
+                                <div className="search-result-poster">
+                                    <img
+                                        src={`${config.imageBaseUrl}${result.poster_path}`}
+                                        alt={result.name}
+                                    />
+                                </div>
+                                <div className="search-result-info-wrapper">
+                                    <div className="search-result-info vertically-centered">
+                                        <span className="search-result-name">
+                                            {result.name}
+                                        </span>
+                                        <span className="search-result-year">
+                                            {result.first_air_date.split("-")[0]}
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>) : (
+                        <div className="no-results">
+                            No results
+                        </div>
+                    )}
+                </div>
+
             </div>
         </>
     );
