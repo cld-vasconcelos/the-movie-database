@@ -95,8 +95,10 @@
 
 .person-cast {
     width: 50%;
+    padding-right: 1rem;
 }
 
 .person-crew {
     width: 50%;
+    padding-left: 1rem;
 }
