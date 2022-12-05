@@ -3,7 +3,7 @@ import { GetMovie, GetMovieCredits } from "../../helpers/movies";
 import Moment from 'moment';
 
 import './Movie.css';
-import Media from "../../components/Media/Media";
+import Model from "../../components/Model/Model";
 
 export async function loader({ params }) {
     const movie = await GetMovie(params.movieId);
@@ -22,8 +22,7 @@ export async function loader({ params }) {
 
 export default function Movie() {
     const { movie, credits } = useLoaderData();
-    const title = movie.title;
-    const mediaType = "movie";
+    const modelType = "movie";
     const details = [
         {
             key: "synopsys",
@@ -44,7 +43,7 @@ export default function Movie() {
 
     return (
         <>
-            <Media media={movie} title={title} mediaType={mediaType} details={details} credits={credits} />
+            <Model model={movie} modelType={modelType} details={details} credits={credits} />
         </>
     );
 }

@@ -1,33 +1,35 @@
 import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 import PersonCreditList from '../PersonCreditList/PersonCreditsList';
-import './Media.css';
+import './Model.css';
+import Pagination from 'react-bootstrap/Pagination';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
-export default function Media(props) {
-    const media = props.media;
-    const title = props.title;
-    const mediaType = props.mediaType;
+export default function Model(props) {
+    const model = props.model;
+    const modelType = props.modelType;
     const details = props.details;
 
     const credits = props.credits;
-    const mediaCast = ["movie", "tv"].indexOf(mediaType) > -1 ? credits.cast.slice(0, 10) : [];
+    const [mediaCast, setMediaCast] = useState(["movie", "tv"].indexOf(modelType) > -1 ? credits.cast.slice(0, 10) : []);
     const mediaCrew = [];
-    switch (mediaType) {
+    switch (modelType) {
         case "movie":
             mediaCrew.push({ job: "Director", elements: credits.crew.filter(crew => crew.job === "Director") });
             break;
         case "tv":
-            mediaCrew.push({ job: "Creator", elements: media.created_by });
+            mediaCrew.push({ job: "Creator", elements: model.created_by });
             break;
         default:
             break;
     }
 
-    const personCast = mediaType === "person"
+    const personCast = modelType === "person"
         ? credits.cast.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1)
         : [];
 
-    const personCrew = mediaType === "person"
+    const personCrew = modelType === "person"
         ? credits.crew.sort((a, b) => (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1)
         : [];
 
@@ -36,42 +38,64 @@ export default function Media(props) {
         navigate(`/person/${personId}`)
     }
 
+    const pageSize = 10;
+    const pageCount = Math.ceil(credits.cast.length / pageSize);
+
+    const [pageIndex, setPageIndex] = useState(1);
+
+    useEffect(() => {
+        const start = (pageIndex - 1) * 10;
+        const end = pageIndex * 10;
+        setMediaCast(credits.cast.slice(start, end));
+    }, [credits.cast, pageIndex]);
+
+    const selectPage = (page) => {
+        setPageIndex(page);
+    };
+
+    let items = [];
+    for (let number = 1; number <= pageCount; number++) {
+        items.push(
+            <Pagination.Item key={number} active={number === pageIndex} onClick={() => selectPage(number)}>
+                {number}
+            </Pagination.Item>,
+        );
+    }
+
     return (
         <>
-            <div className="media-wrapper">
-                <div className="aaa">
-                    <div className="media-poster">
+            <div className="model-wrapper">
+                <div className="model-basic">
+                    <div className="model-poster">
                         <img
-                            src={media.poster_path || media.profille_path ? `${config.imageBaseUrl}${media.poster_path || media.profile_path}` : require("../../assets/images/no-poster.jpeg")}
-                            className="media-poster"
-                            alt={title}
+                            src={model.poster_path || model.profile_path ? `${config.imageBaseUrl}${model.poster_path || model.profile_path}` : require("../../assets/images/no-poster.jpeg")}
+                            className="model-poster"
+                            alt={model.title || model.name}
                         />
                     </div>
-                    <div className="media-info">
-                        <div className="media-title">
-                            {title}
+                    <div className="model-info">
+                        <div className="model-name">
+                            {model.title || model.name}
                         </div>
-                        <div className="media-overview">
-                            <div className="media-details">
-                                <ul>
-                                    {details.map((detail) => (
-                                        <li key={detail.key}>
-                                            <div className="info-title">
-                                                {detail.title}
-                                            </div>
-                                            <div className="info-content">
-                                                {detail.content}
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                        <div className="model-details">
+                            <ul>
+                                {details.map((detail) => (
+                                    <li key={detail.key}>
+                                        <div className="model-detail-title">
+                                            {detail.title}
+                                        </div>
+                                        <div className="model-detail-content">
+                                            {detail.content}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div className="credits">
+                <div className="model-credits">
                     <h4>Credits</h4>
-                    {mediaType === "person" ? (
+                    {modelType === "person" ? (
                         <div className="person-credits">
                             {personCast.length > 0 ? (
                                 <div className="person-cast">
@@ -112,7 +136,7 @@ export default function Media(props) {
                                         <div>
                                             <b>Cast</b>
                                         </div>
-                                        <ul>
+                                        <ul className="media-cast-list">
                                             {mediaCast.map((cast) => (
                                                 <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
                                                     <div className="media-cast-profile">
@@ -132,6 +156,11 @@ export default function Media(props) {
                                                 </li>
                                             ))}
                                         </ul>
+
+
+                                        <div className="media-cast-pagination">
+                                            <Pagination>{items}</Pagination>
+                                        </div>
                                     </>
                                 ) : ""}
                             </div>

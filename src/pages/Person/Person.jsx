@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import Media from "../../components/Media/Media";
+import Model from "../../components/Model/Model";
 import { GetPerson, GetPersonCredits } from "../../helpers/people";
 import Moment from "moment";
 
@@ -20,8 +20,7 @@ export async function loader({ params }) {
 
 export default function Person() {
     const { person, credits } = useLoaderData();
-    const title = person.name;
-    const mediaType = "person";
+    const modelType = "person";
     const details = [
         {
             key: "biography",
@@ -43,10 +42,9 @@ export default function Person() {
         });
     }
 
-    console.log(credits);
     return (
         <>
-            <Media media={person} title={title} mediaType={mediaType} details={details} credits={credits} />
+            <Model model={person} modelType={modelType} details={details} credits={credits} />
         </>
     );
 }

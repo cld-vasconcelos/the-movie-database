@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { GetShow, GetShowCredits } from "../../helpers/shows";
 import Moment from 'moment';
 import './Show.css';
-import Media from "../../components/Media/Media";
+import Model from "../../components/Model/Model";
 
 export async function loader({ params }) {
     const show = await GetShow(params.showId);
@@ -21,8 +21,7 @@ export async function loader({ params }) {
 
 export default function Show() {
     const { show, credits } = useLoaderData();
-    const title = show.name;
-    const mediaType = "tv";
+    const modelType = "tv";
     const details = [
         {
             key: "synopsys",
@@ -48,7 +47,7 @@ export default function Show() {
 
     return (
         <>
-            <Media media={show} title={title} mediaType={mediaType} details={details} credits={credits} />
+            <Model modell={show} modelType={modelType} details={details} credits={credits} />
         </>
     );
 }
