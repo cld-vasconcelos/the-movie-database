@@ -106,10 +106,5 @@
 }
 
 .media-cast-pagination {
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.media-cast-pagination ul {
-    display: inline-flex;
+    width: 100%;
 }

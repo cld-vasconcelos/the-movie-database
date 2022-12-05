@@ -44,5 +44,5 @@
 }
 
 .person-credits-pagination {
-    display: inline-flex;
+    width: 100%;
 }

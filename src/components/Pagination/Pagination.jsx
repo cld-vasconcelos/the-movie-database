@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Pagination } from "react-bootstrap";
 
+import "./Pagination.css";
+
 function Page({ pageNumber, pageIndex, onPageClick }) {
     return (
         <Pagination.Item key={pageNumber} active={pageNumber === pageIndex} onClick={onPageClick}>
@@ -25,7 +27,7 @@ export default function PaginationComponent(props) {
         const updatePages = () => {
             const newPages = [];
     
-            const pageLimit = 6;
+            const pageLimit = 5;
             const step = 3;
     
             newPages.push(
@@ -41,8 +43,8 @@ export default function PaginationComponent(props) {
                     <Page pageNumber={pageNumber} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageNumber)} />
                 );
             }
-    
-            if(pageCount > pageLimit && pageIndex < pageCount - step) {
+    debugger;
+            if(pageCount > pageLimit && pageIndex <= pageCount - step) {
                 newPages.push(<Pagination.Ellipsis disabled />);
             }
     
@@ -57,6 +59,8 @@ export default function PaginationComponent(props) {
     }, [onPageChange, pageIndex, pageSize, pageCount]);
 
     return (
-        <Pagination>{pages}</Pagination>
+        <div className="pagination-wrapper">
+            <Pagination>{pages}</Pagination>
+        </div>
     );
 }
