@@ -42,3 +42,7 @@
 .person-credit-year {
     right: 0;
 }
+
+.person-credits-pagination {
+    display: inline-flex;
+}

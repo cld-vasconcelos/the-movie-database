@@ -23,6 +23,8 @@ export default function PaginationComponent(props) {
         );
     }
 
+    debugger;
+
     return (
         <Pagination>{pages}</Pagination>
     );
