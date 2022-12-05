@@ -2,28 +2,59 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Pagination } from "react-bootstrap";
 
+function Page({ pageNumber, pageIndex, onPageClick }) {
+    return (
+        <Pagination.Item key={pageNumber} active={pageNumber === pageIndex} onClick={onPageClick}>
+            {pageNumber}
+        </Pagination.Item>
+    );
+}
+
 export default function PaginationComponent(props) {
     const count = props.count;
     const onPageChange = props.onPageChange;
-    
+
+    const [pages, setPages] = useState([]);
     const pageSize = props.pageSize || 10;
     const pageCount = Math.ceil(count / pageSize);
 
     const [pageIndex, setPageIndex] = useState(1);
     useEffect(() => {
         onPageChange(pageIndex, pageSize);
-    }, [onPageChange, pageIndex, pageSize]);
 
-    let pages = [];
-    for (let number = 1; number <= pageCount; number++) {
-        pages.push(
-            <Pagination.Item key={number} active={number === pageIndex} onClick={() => setPageIndex(number)}>
-                {number}
-            </Pagination.Item>,
-        );
-    }
+        const updatePages = () => {
+            const newPages = [];
+    
+            const pageLimit = 6;
+            const step = 3;
+    
+            newPages.push(
+                <Page pageNumber={1} pageIndex={pageIndex} onPageClick={() => setPageIndex(1)} />
+            );
+            
+            if(pageCount > pageLimit && pageIndex > step) {
+                newPages.push(<Pagination.Ellipsis disabled />);
+            }
+    
+            for (let pageNumber = Math.max(2, pageIndex - 2); pageNumber <= Math.min(pageIndex + 2, pageCount - 1); pageNumber++) {
+                newPages.push(
+                    <Page pageNumber={pageNumber} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageNumber)} />
+                );
+            }
+    
+            if(pageCount > pageLimit && pageIndex < pageCount - step) {
+                newPages.push(<Pagination.Ellipsis disabled />);
+            }
+    
+            newPages.push(
+                <Page pageNumber={pageCount} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageCount)} />
+            );
+    
+            setPages(newPages);
+        };
 
-    debugger;
+        updatePages();
+    }, [onPageChange, pageIndex, pageSize, pageCount]);
 
     return (
         <Pagination>{pages}</Pagination>

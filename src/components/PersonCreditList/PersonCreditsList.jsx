@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Pagination } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
 import PaginationComponent from "../Pagination/Pagination";
