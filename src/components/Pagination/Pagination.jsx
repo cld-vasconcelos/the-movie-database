@@ -26,32 +26,35 @@ export default function PaginationComponent(props) {
 
         const updatePages = () => {
             const newPages = [];
-    
+
             const pageLimit = 5;
             const step = 3;
-    
+
             newPages.push(
                 <Page pageNumber={1} pageIndex={pageIndex} onPageClick={() => setPageIndex(1)} />
             );
-            
-            if(pageCount > pageLimit && pageIndex > step) {
+
+            if (pageCount > pageLimit && pageIndex > step) {
                 newPages.push(<Pagination.Ellipsis disabled />);
             }
-    
+
             for (let pageNumber = Math.max(2, pageIndex - 2); pageNumber <= Math.min(pageIndex + 2, pageCount - 1); pageNumber++) {
                 newPages.push(
                     <Page pageNumber={pageNumber} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageNumber)} />
                 );
             }
-    debugger;
-            if(pageCount > pageLimit && pageIndex <= pageCount - step) {
+
+            if (pageCount > pageLimit && pageIndex <= pageCount - step) {
                 newPages.push(<Pagination.Ellipsis disabled />);
             }
-    
-            newPages.push(
-                <Page pageNumber={pageCount} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageCount)} />
-            );
-    
+
+            if (pageCount > 1) {
+                newPages.push(
+                    <Page pageNumber={pageCount} pageIndex={pageIndex} onPageClick={() => setPageIndex(pageCount)} />
+                );
+            }
+
+
             setPages(newPages);
         };
 
