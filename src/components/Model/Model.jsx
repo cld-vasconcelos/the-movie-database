@@ -2,9 +2,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import config from '../../config';
 import PersonCreditList from '../PersonCreditList/PersonCreditsList';
 import './Model.css';
-import Pagination from 'react-bootstrap/Pagination';
 import { useState } from 'react';
-import { useEffect } from 'react';
+import PaginationComponent from '../Pagination/Pagination.jsx';
 
 export default function Model(props) {
     const model = props.model;
@@ -12,7 +11,15 @@ export default function Model(props) {
     const details = props.details;
 
     const credits = props.credits;
-    const [mediaCast, setMediaCast] = useState(["movie", "tv"].indexOf(modelType) > -1 ? credits.cast.slice(0, 10) : []);
+
+    const mediaCastPageSize = 10;
+    const [mediaCast, setMediaCast] = useState(credits.cast.slice(0, mediaCastPageSize));
+    const onMediaCastPageChange = (pageIndex, pageSize) => {
+        const start = (pageIndex - 1) * pageSize;
+        const end = pageIndex * pageSize;
+        setMediaCast(credits.cast.slice(start, end));
+    };
+    
     const mediaCrew = [];
     switch (modelType) {
         case "movie":
@@ -36,30 +43,6 @@ export default function Model(props) {
     const navigate = useNavigate();
     const redirectToPerson = (personId) => {
         navigate(`/person/${personId}`)
-    }
-
-    const pageSize = 10;
-    const pageCount = Math.ceil(credits.cast.length / pageSize);
-
-    const [pageIndex, setPageIndex] = useState(1);
-
-    useEffect(() => {
-        const start = (pageIndex - 1) * 10;
-        const end = pageIndex * 10;
-        setMediaCast(credits.cast.slice(start, end));
-    }, [credits.cast, pageIndex]);
-
-    const selectPage = (page) => {
-        setPageIndex(page);
-    };
-
-    let items = [];
-    for (let number = 1; number <= pageCount; number++) {
-        items.push(
-            <Pagination.Item key={number} active={number === pageIndex} onClick={() => selectPage(number)}>
-                {number}
-            </Pagination.Item>,
-        );
     }
 
     return (
@@ -156,10 +139,8 @@ export default function Model(props) {
                                                 </li>
                                             ))}
                                         </ul>
-
-
                                         <div className="media-cast-pagination">
-                                            <Pagination>{items}</Pagination>
+                                            <PaginationComponent count={credits.cast.length} pageSize={mediaCastPageSize} onPageChange={onMediaCastPageChange} />
                                         </div>
                                     </>
                                 ) : ""}
