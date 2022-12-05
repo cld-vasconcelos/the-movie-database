@@ -1,5 +1,10 @@
+.search-result-list {
+    padding: 0 1rem !important;
+    margin-bottom: 2rem;
+}
+
 .search-category {
-    padding: .5rem 1rem;
+    padding: .5rem 0;
 }
 
 .search-results li {
@@ -13,7 +18,7 @@
 }
 
 .search-result-poster {
-    width: 4rem;
+    width: 3rem;
 }
 
 .search-result-poster img {
