@@ -45,9 +45,15 @@
     padding: 1rem 0;
 }
 
+.media-credits ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .media-credits li {
     display: flex;
     padding: 1rem;
+    width: 50%;
 }
 
 .media-credits li:hover {

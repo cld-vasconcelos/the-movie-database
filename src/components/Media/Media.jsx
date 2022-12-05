@@ -10,14 +10,14 @@ export default function Media(props) {
     const details = props.details;
 
     const credits = props.credits;
-    const topCast = ["movie", "tv"].indexOf(mediaType) > -1 ? credits.cast.slice(0, 5) : [];
-    const topCrew = [];
+    const mediaCast = ["movie", "tv"].indexOf(mediaType) > -1 ? credits.cast.slice(0, 10) : [];
+    const mediaCrew = [];
     switch (mediaType) {
         case "movie":
-            topCrew.push({ job: "Director", elements: credits.crew.filter(crew => crew.job === "Director") });
+            mediaCrew.push({ job: "Director", elements: credits.crew.filter(crew => crew.job === "Director") });
             break;
         case "tv":
-            topCrew.push({ job: "Creator", elements: media.created_by });
+            mediaCrew.push({ job: "Creator", elements: media.created_by });
             break;
         default:
             break;
@@ -87,12 +87,10 @@ export default function Media(props) {
                     ) : (
                         <div className="media-credits">
                             <div>
-                                {topCrew.length > 0 ? (
+                                {mediaCrew.length > 0 ? (
                                     <div className="media-credits-crew">
-                                        {topCrew.map((crew) => (
+                                        {mediaCrew.map((crew) => (
                                             <div key={crew.job} className="media-crew-element" >
-
-
                                                 <div>
                                                     <b>{crew.job}{crew.elements.length > 1 ? "s" : ""}</b>
                                                 </div>
@@ -109,13 +107,13 @@ export default function Media(props) {
                                     </div>) : ""}
                             </div>
                             <div>
-                                {topCast?.length > 0 ? (
+                                {mediaCast?.length > 0 ? (
                                     <>
                                         <div>
                                             <b>Cast</b>
                                         </div>
                                         <ul>
-                                            {topCast.map((cast) => (
+                                            {mediaCast.map((cast) => (
                                                 <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
                                                     <div className="media-cast-profile">
                                                         <img
