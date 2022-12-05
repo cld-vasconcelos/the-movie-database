@@ -20,7 +20,7 @@ export default function SearchResultList(props) {
                         <li key={result.id} onClick={() => { redirectTo(result, mediaType) }}>
                             <div className="search-result-poster">
                                 <img
-                                    src={`${config.imageBaseUrl}${result.poster_path}`}
+                                    src={`${config.imageBaseUrl}${result.poster_path || result.profile_path}`}
                                     alt={mediaType === "movie" ? result.title : result.name}
                                 />
                             </div>
@@ -29,9 +29,23 @@ export default function SearchResultList(props) {
                                     <span className="search-result-name">
                                         {mediaType === "movie" ? result.title : result.name}
                                     </span>
-                                    <span className="search-result-year">
-                                        {(mediaType === "movie" ? result.release_date : result.first_air_date).split("-")[0]}
-                                    </span>
+                                    <div className="search-result-year">
+                                        {mediaType === "person" ? (
+                                            // result.known_for.slice(0, 2).map((media, index) => (
+                                            //     <>
+                                            //         <span key={media.id}>
+                                            //             {media.title || media.name}
+                                            //             {index < result.known_for.length - 1 ? ",      " : ""}
+                                            //         </span>
+                                            //     </>
+                                            // ))
+                                            result.known_for.slice(0, 2).map((media) => media.title || media.name).join(", ")
+                                        ) : (
+                                            <span>
+                                                {(mediaType === "movie" ? result.release_date : result.first_air_date).split("-")[0]}
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </li>
