@@ -24,7 +24,7 @@ export default function PersonCreditList(props) {
                                 <li key={credit.credit_id} onClick={() => redirectToMedia(credit)}>
                                     <div className="person-credit-poster">
                                         <img
-                                            src={`${config.imageBaseUrl}${credit.poster_path}`}
+                                            src={credit.poster_path ? `${config.imageBaseUrl}${credit.poster_path}` : require("../../assets/images/no-poster.jpeg")}
                                             alt={credit.media_type === "movie" ? credit.title : credit.name}
                                         />
                                     </div>

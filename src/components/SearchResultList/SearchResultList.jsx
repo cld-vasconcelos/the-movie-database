@@ -22,7 +22,7 @@ export default function SearchResultList(props) {
                             <li key={result.id} onClick={() => { redirectTo(result, mediaType) }}>
                                 <div className="search-result-poster">
                                     <img
-                                        src={`${config.imageBaseUrl}${result.poster_path || result.profile_path}`}
+                                        src={result.poster_path || result.profile_path ? `${config.imageBaseUrl}${result.poster_path || result.profile_path}` : require("../../assets/images/no-poster.jpeg")}
                                         alt={mediaType === "movie" ? result.title : result.name}
                                     />
                                 </div>

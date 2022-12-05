@@ -42,7 +42,7 @@ export default function Media(props) {
                 <div className="aaa">
                     <div className="media-poster">
                         <img
-                            src={`${config.imageBaseUrl}${media.poster_path || media.profile_path}`}
+                            src={media.poster_path || media.profille_path ? `${config.imageBaseUrl}${media.poster_path || media.profile_path}` : require("../../assets/images/no-poster.jpeg")}
                             className="media-poster"
                             alt={title}
                         />
@@ -117,7 +117,7 @@ export default function Media(props) {
                                                 <li key={cast.id} onClick={() => redirectToPerson(cast.id)}>
                                                     <div className="media-cast-profile">
                                                         <img
-                                                            src={`${config.imageBaseUrl}${cast.profile_path}`}
+                                                            src={cast.profile_path ? `${config.imageBaseUrl}${cast.profile_path}` : require("../../assets/images/no-poster.jpeg")}
                                                             alt={cast.name}
                                                         />
                                                     </div>
