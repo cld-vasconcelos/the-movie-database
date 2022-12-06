@@ -7,7 +7,7 @@ export async function GetTopMovies() {
         .then(response => response.results.slice(0, 5));
 }
 
-export async function SearchMovies(q) {
+export async function SearchMovies(q, page = 1) {
     const route = "/search/movie";
     const params = [
         { 
@@ -16,11 +16,10 @@ export async function SearchMovies(q) {
         },
         { 
             key: "page", 
-            value: "1" 
+            value: page
         }
     ];
-    return ApiGet(route, params)
-        .then(response => response.results.slice(0, 5));
+    return ApiGet(route, params);
 }
 
 export async function GetMovie(movieId) {

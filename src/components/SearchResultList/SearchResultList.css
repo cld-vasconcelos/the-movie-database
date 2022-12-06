@@ -1,4 +1,4 @@
-.search-result-list {
+.search-result {
     padding: 0 1rem !important;
     margin-bottom: 2rem;
 }
@@ -7,12 +7,12 @@
     padding: .5rem 0;
 }
 
-.search-results li {
+.search-result-list li {
     display: flex;
     padding: .5rem 1rem;
 }
 
-.search-results li:hover {
+.search-result-list li:hover {
     background-color: gainsboro;
     cursor: pointer;
 }

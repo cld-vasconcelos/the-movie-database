@@ -12,8 +12,7 @@ export async function SearchPeople(q) {
             value: "1" 
         }
     ];
-    return ApiGet(route, params)
-        .then(response => response.results.slice(0, 5));
+    return ApiGet(route, params);
 }
 
 export async function GetPerson(personId) {
