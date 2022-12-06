@@ -1,22 +1,22 @@
-.top-picks ul {
+.top-media-list ul {
     list-style: none;
     padding: 0;
     display: inline-flex;
 }
 
-.top-picks li {
+.top-media-list li {
     padding: 0 §rem;
 
     width: 13rem;
 }
 
-.top-pick {
+.top-media {
     width: 15rem;
     padding: 0 1rem;
     margin-bottom: 2rem
 }
 
-.top-pick img {
+.top-media img {
     max-width: 100%;
     max-height: 100%;
 }

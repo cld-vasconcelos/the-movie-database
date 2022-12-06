@@ -1,6 +1,6 @@
 
 import { useLoaderData } from 'react-router-dom';
-import TopPick from '../../components/TopPicks/TopPicks.jsx';
+import TopMedia from '../../components/TopMedia/TopMedia.jsx';
 import { getPopularMovies } from '../../helpers/movies.js';
 import { getPopularShows } from '../../helpers/shows.js';
 import './Home.css';
@@ -20,8 +20,8 @@ export default function Home() {
 
     return (
         <>
-            <TopPick mediaType="movie" picks={topMovies} />
-            <TopPick mediaType="tv" picks={topShows} />
+            <TopMedia mediaType="movie" media={topMovies} />
+            <TopMedia mediaType="tv" media={topShows} />
         </>
     );
 }
