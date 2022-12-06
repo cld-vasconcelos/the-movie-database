@@ -1,6 +1,6 @@
 import { ApiGet } from "../service/api.js";
 
-export async function SearchPeople(q) {
+export async function SearchPeople(q, page = 1) {
     const route = "/search/person";
     const params = [
         { 
@@ -9,7 +9,7 @@ export async function SearchPeople(q) {
         },
         { 
             key: "page", 
-            value: "1" 
+            value: page
         }
     ];
     return ApiGet(route, params);

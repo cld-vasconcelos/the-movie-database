@@ -7,7 +7,7 @@ export async function GetTopShows() {
         .then(response => response.results.slice(0, 5));
 }
 
-export async function SearchShows(q) {
+export async function SearchShows(q, page = 1) {
     const route = "/search/tv";
     const params = [
         { 
@@ -16,7 +16,7 @@ export async function SearchShows(q) {
         },
         { 
             key: "page", 
-            value: "1" 
+            value: page
         }
     ];
     return ApiGet(route, params);
