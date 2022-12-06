@@ -47,7 +47,7 @@ export default function Show() {
 
     return (
         <>
-            <Model modell={show} modelType={modelType} details={details} credits={credits} />
+            <Model model={show} modelType={modelType} details={details} credits={credits} />
         </>
     );
 }

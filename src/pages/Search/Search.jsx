@@ -24,9 +24,27 @@ export default function Search() {
         <>
             <div className="search-wrapper">
                 <h3>Search '{q}'</h3>
-                <SearchResultList q={q} mediaType="movie" category="Movies" results={movieResult} searchFunction={SearchMovies} />
-                <SearchResultList q={q} mediaType="tv" category="Shows" results={showResult} searchFunction={SearchShows} />
-                <SearchResultList q={q} mediaType="person" category="People" results={personResult} searchFunction={SearchPeople} />
+                <SearchResultList
+                    q={q}
+                    modelType="movie"
+                    category="Movies"
+                    results={movieResult}
+                    searchFunction={SearchMovies}
+                />
+                <SearchResultList
+                    q={q}
+                    modelType="tv"
+                    category="Shows"
+                    results={showResult}
+                    searchFunction={SearchShows}
+                />
+                <SearchResultList
+                    q={q}
+                    modelType="person"
+                    category="People"
+                    results={personResult}
+                    searchFunction={SearchPeople}
+                />
             </div>
         </>
     );
