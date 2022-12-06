@@ -6,7 +6,9 @@ import "./PersonCreditList.css";
 
 export default function PersonCreditList(props) {
     const type = props.type;
-    const credits = props.credits;
+    const credits = props.credits.sort((a, b) =>
+        (a.release_date || a.last_air_date) < (b.release_date || b.last_air_date) ? 1 : -1
+    );
 
     const creditsPageSize = 10;
 

@@ -1,7 +1,9 @@
 import { useLoaderData } from "react-router-dom";
-import Model from "../../components/Model/Model";
 import { GetPerson, GetPersonCredits } from "../../helpers/people";
 import Moment from "moment";
+import ModelOverview from "../../components/ModelOverview/ModelOverview";
+import PersonCreditList from "../../components/PersonCreditList/PersonCreditsList";
+import "./Person.css";
 
 export async function loader({ params }) {
     const person = await GetPerson(params.personId);
@@ -20,7 +22,6 @@ export async function loader({ params }) {
 
 export default function Person() {
     const { person, credits } = useLoaderData();
-    const modelType = "person";
     const details = [
         {
             key: "biography",
@@ -42,9 +43,24 @@ export default function Person() {
         });
     }
 
+    const castCredits = credits.cast;
+    const crewCredits = credits.crew;
+
     return (
         <>
-            <Model model={person} modelType={modelType} details={details} credits={credits} />
+            <ModelOverview model={person} details={details} />
+            <div className="person-credits">
+                {castCredits.length > 0 ? (
+                    <div className="person-cast">
+                        <PersonCreditList type="cast" credits={castCredits} />
+                    </div>
+                ) : ""}
+                {crewCredits.length > 0 ? (
+                    <div className="person-crew">
+                        <PersonCreditList type="crew" credits={crewCredits} />
+                    </div>
+                ) : ""}
+            </div>
         </>
     );
 }

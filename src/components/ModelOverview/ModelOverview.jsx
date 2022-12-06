@@ -1,4 +1,4 @@
-import config from "../../../config";
+import config from "../../config";
 import "./ModelOverview.css";
 
 export default function ModelOverview(props) {
@@ -8,7 +8,7 @@ export default function ModelOverview(props) {
         <div className="model-overview">
             <div className="model-poster">
                 <img
-                    src={model.poster_path || model.profile_path ? `${config.imageBaseUrl}${model.poster_path || model.profile_path}` : require("../../../assets/images/no-poster.jpeg")}
+                    src={model.poster_path || model.profile_path ? `${config.imageBaseUrl}${model.poster_path || model.profile_path}` : require("../../assets/images/no-poster.jpeg")}
                     className="model-poster"
                     alt={model.title || model.name}
                 />

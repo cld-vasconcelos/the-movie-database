@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { GetShow, GetShowCredits } from "../../helpers/shows";
 import Moment from 'moment';
 import './Show.css';
-import ModelOverview from "../../components/Model/ModelOverview/ModelOverview";
+import ModelOverview from "../../components/ModelOverview/ModelOverview";
 import MediaCast from "../../components/MediaCast/MediaCast";
 import MediaCrew from "../../components/MediaCrew/MediaCrew";
 

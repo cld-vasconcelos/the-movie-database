@@ -7,7 +7,6 @@ export default function MediaCrew(props) {
     return (
         <>
             {crew.length > 0 ? (
-
                 <div className="media-crew">
                     <ul>
                         {crewJobs.map((crewJob) => (
@@ -25,10 +24,7 @@ export default function MediaCrew(props) {
                             </li>
                         ))}
                     </ul>
-
                 </div>
-
-
             ) : ("")}
         </>
     );
