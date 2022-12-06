@@ -3,14 +3,6 @@ import { Pagination } from "react-bootstrap";
 
 import "./Pagination.css";
 
-function Page({ pageNumber, pageIndex, onPageClick }) {
-    return (
-        <Pagination.Item active={pageNumber === pageIndex} onClick={onPageClick}>
-            {pageNumber}
-        </Pagination.Item>
-    );
-}
-
 export default function PaginationComponent(props) {
     const count = props.count;
     const onPageChange = props.onPageChange;
@@ -21,6 +13,14 @@ export default function PaginationComponent(props) {
     const [pageIndex, setPageIndex] = useState(1);
 
     const pageNumbers = Array.from({ length: pageCount }, (_, i) => i + 1);
+
+    const Page = ({ pageNumber, pageIndex, onPageClick }) => {
+        return (
+            <Pagination.Item active={pageNumber === pageIndex} onClick={onPageClick}>
+                {pageNumber}
+            </Pagination.Item>
+        );
+    }
 
     return (
         <div className="pagination-wrapper">
