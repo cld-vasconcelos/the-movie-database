@@ -32,6 +32,10 @@
     display: block;
     font-weight: bold;
     padding-bottom: .2rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .person-credit-role {

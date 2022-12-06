@@ -42,7 +42,7 @@ export default function PersonCreditList(props) {
                                             />
                                         </div>
                                         <div className="person-credit-info">
-                                            <div className="vertically-centered">
+                                            <div className="vertically-centered" style={{ width: "80%" }}>
                                                 <span className="person-credit-name">
                                                     {credit.media_type === "movie" ? credit.title : credit.name}
                                                 </span>
