@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
-    const logoUrl = "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg";
     const [query, setQuery] = useState("");
     const navigate = useNavigate();
 
@@ -31,7 +30,7 @@ export default function Header() {
             <div className="header-wrapper">
                 <div className="header-title" onClick={() => { redirectToHome(); }}>
                     <div className="header-title-logo">
-                        <img src={logoUrl} alt="tmdb" />
+                        <img src={require("../../assets/images/logo.svg").default} alt="tmdb" />
                     </div>
                     <div className="header-title-text">
                         <span className="vertically-centered">The Movie Database</span>
