@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router-dom";
-import { GetPerson, GetPersonCredits } from "../../helpers/people";
+import { getPerson, getPersonCredits } from "../../helpers/people";
 import Moment from "moment";
 import ModelOverview from "../../components/ModelOverview/ModelOverview";
 import PersonCreditList from "../../components/PersonCreditList/PersonCreditsList";
 import "./Person.css";
 
 export async function loader({ params }) {
-    const person = await GetPerson(params.personId);
+    const person = await getPerson(params.personId);
 
     if (person.success === false) { //'person' only has 'success' property when the request fails, since this condition
         throw new Response("", {
@@ -15,7 +15,7 @@ export async function loader({ params }) {
         });
     }
 
-    const credits = await GetPersonCredits(params.personId);
+    const credits = await getPersonCredits(params.personId);
 
     return { person, credits };
 }

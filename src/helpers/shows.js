@@ -1,13 +1,12 @@
-import { ApiGet } from "../service/api.js";
+import { apiGet } from "../service/api.js";
 
-export async function GetTopShows() {
+export async function getPopularShows(page = 1) {
     const route = "/tv/popular";
-    const params = [{ key: "page", value: "1" }];
-    return ApiGet(route, params)
-        .then(response => response.results.slice(0, 5));
+    const params = [{ key: "page", value: page }];
+    return apiGet(route, params);
 }
 
-export async function SearchShows(q, page = 1) {
+export async function searchShows(q, page = 1) {
     const route = "/search/tv";
     const params = [
         { 
@@ -19,17 +18,17 @@ export async function SearchShows(q, page = 1) {
             value: page
         }
     ];
-    return ApiGet(route, params);
+    return apiGet(route, params);
 }
 
-export async function GetShow(showId) {
+export async function getShow(showId) {
     const route = `/tv/${showId}`;
     const params = [];
-    return ApiGet(route, params);
+    return apiGet(route, params);
 }
 
-export async function GetShowCredits(showId) {
+export async function getShowCredits(showId) {
     const route = `/tv/${showId}/credits`;
     const params = [];
-    return ApiGet(route, params);
+    return apiGet(route, params);
 }

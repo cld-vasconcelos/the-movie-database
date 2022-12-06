@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import SearchResultList from "../../components/SearchResultList/SearchResultList";
-import { SearchMovies } from "../../helpers/movies";
-import { SearchPeople } from "../../helpers/people";
-import { SearchShows } from "../../helpers/shows";
+import { searchMovies } from "../../helpers/movies";
+import { searchPeople } from "../../helpers/people";
+import { searchShows } from "../../helpers/shows";
 
 import "./Search.css";
 
@@ -10,9 +10,9 @@ export async function loader({ request }) {
     const url = new URL(request.url);
     const q = url.searchParams.get("q");
 
-    const movieResult = await SearchMovies(q);
-    const showResult = await SearchShows(q);
-    const personResult = await SearchPeople(q);
+    const movieResult = await searchMovies(q);
+    const showResult = await searchShows(q);
+    const personResult = await searchPeople(q);
 
     return { q, movieResult, showResult, personResult };
 }
@@ -29,21 +29,21 @@ export default function Search() {
                     modelType="movie"
                     category="Movies"
                     results={movieResult}
-                    searchFunction={SearchMovies}
+                    searchFunction={searchMovies}
                 />
                 <SearchResultList
                     q={q}
                     modelType="tv"
                     category="Shows"
                     results={showResult}
-                    searchFunction={SearchShows}
+                    searchFunction={searchShows}
                 />
                 <SearchResultList
                     q={q}
                     modelType="person"
                     category="People"
                     results={personResult}
-                    searchFunction={SearchPeople}
+                    searchFunction={searchPeople}
                 />
             </div>
         </>

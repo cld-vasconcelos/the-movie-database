@@ -1,6 +1,6 @@
 import config from "../config.js"
 
-export async function ApiGet(route, params) {
+export async function apiGet(route, params) {
     const requestParams = [
         {
             key: "api_key",

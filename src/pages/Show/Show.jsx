@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { GetShow, GetShowCredits } from "../../helpers/shows";
+import { getShow, getShowCredits } from "../../helpers/shows";
 import Moment from 'moment';
 import './Show.css';
 import ModelOverview from "../../components/ModelOverview/ModelOverview";
@@ -7,7 +7,7 @@ import MediaCast from "../../components/MediaCast/MediaCast";
 import MediaCrew from "../../components/MediaCrew/MediaCrew";
 
 export async function loader({ params }) {
-    const show = await GetShow(params.showId);
+    const show = await getShow(params.showId);
 
     if (show.success === false) { //'show' only has 'success' property when the request fails, since this condition
         throw new Response("", {
@@ -16,7 +16,7 @@ export async function loader({ params }) {
         });
     }
 
-    const credits = await GetShowCredits(params.showId);
+    const credits = await getShowCredits(params.showId);
 
     return { show, credits };
 }

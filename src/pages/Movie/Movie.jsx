@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { GetMovie, GetMovieCredits } from "../../helpers/movies";
+import { getMovie, getMovieCredits } from "../../helpers/movies";
 import Moment from 'moment';
 import './Movie.css';
 import ModelOverview from "../../components/ModelOverview/ModelOverview";
@@ -7,7 +7,7 @@ import MediaCast from "../../components/MediaCast/MediaCast";
 import MediaCrew from "../../components/MediaCrew/MediaCrew";
 
 export async function loader({ params }) {
-    const movie = await GetMovie(params.movieId);
+    const movie = await getMovie(params.movieId);
 
     if (movie.success === false) { //'movie' only has 'success' property when the request fails, since this condition
         throw new Response("", {
@@ -16,7 +16,7 @@ export async function loader({ params }) {
         });
     }
 
-    const credits = await GetMovieCredits(params.movieId);
+    const credits = await getMovieCredits(params.movieId);
 
     return { movie, credits };
 }
