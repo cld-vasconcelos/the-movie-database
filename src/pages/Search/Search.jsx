@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import SearchResultList from "../../components/SearchResultList/SearchResultList";
 import { SearchMovies } from "../../helpers/movies";
