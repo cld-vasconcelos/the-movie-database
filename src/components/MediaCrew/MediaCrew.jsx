@@ -10,7 +10,7 @@ export default function MediaCrew(props) {
                 <div className="media-crew">
                     <ul>
                         {crewJobs.map((crewJob) => (
-                            <li>
+                            <li key={crewJob}>
                                 <div className="media-crew-job">
                                     <b>{crewJob}</b>
                                 </div>

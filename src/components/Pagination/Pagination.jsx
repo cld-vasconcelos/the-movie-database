@@ -5,7 +5,7 @@ import "./Pagination.css";
 
 function Page({ pageNumber, pageIndex, onPageClick }) {
     return (
-        <Pagination.Item key={pageNumber} active={pageNumber === pageIndex} onClick={onPageClick}>
+        <Pagination.Item active={pageNumber === pageIndex} onClick={onPageClick}>
             {pageNumber}
         </Pagination.Item>
     );
@@ -33,9 +33,9 @@ export default function PaginationComponent(props) {
                         || pageNumber === pageCount
                         || ((upper > pageCount - 2 ? pageCount - 6 : lower) <= pageNumber && pageNumber <= (lower < 3 ? 7 : upper))
                     ) {
-                        return <Page pageNumber={pageNumber} pageIndex={pageIndex} onPageClick={() => {setPageIndex(pageNumber); onPageChange(pageNumber, pageSize);}} />
+                        return <Page key={pageNumber} pageNumber={pageNumber} pageIndex={pageIndex} onPageClick={() => {setPageIndex(pageNumber); onPageChange(pageNumber, pageSize);}} />
                     } else if ((pageNumber === 2 && lower !== 1) || (pageNumber === pageCount - 1 && upper !== pageCount)) {
-                        return <Pagination.Ellipsis disabled />
+                        return <Pagination.Ellipsis key={pageNumber} disabled />
                     } else {
                         return "";
                     }
