@@ -1,0 +1,45 @@
+
+.media-cast-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-cast-list li {
+    display: flex;
+    padding: 1rem;
+    width: 50%;
+}
+
+.media-cast-list li:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.media-cast-profile {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.media-cast-profile img {
+    height: auto;
+    width: 100%;
+    margin-top: -10%;
+}
+
+.media-cast-info {
+    padding: 1rem;
+}
+
+.media-cast-name {
+    display: block;
+    font-weight: bold;
+    padding-bottom: .2rem;
+}
+
+.media-cast-role {
+    display: block;
+    color: #757575
+}

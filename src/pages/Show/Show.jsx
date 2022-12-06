@@ -2,7 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import { GetShow, GetShowCredits } from "../../helpers/shows";
 import Moment from 'moment';
 import './Show.css';
-import Model from "../../components/Model/Model";
+import ModelOverview from "../../components/Model/ModelOverview/ModelOverview";
+import MediaCast from "../../components/MediaCast/MediaCast";
+import MediaCrew from "../../components/MediaCrew/MediaCrew";
 
 export async function loader({ params }) {
     const show = await GetShow(params.showId);
@@ -21,7 +23,6 @@ export async function loader({ params }) {
 
 export default function Show() {
     const { show, credits } = useLoaderData();
-    const modelType = "tv";
     const details = [
         {
             key: "synopsys",
@@ -45,9 +46,17 @@ export default function Show() {
         }
     ];
 
+    const cast = credits.cast;
+    const crew = show.created_by.map((createdBy) => ({
+        ...createdBy,
+        job: "Creator"
+    }));
+
     return (
         <>
-            <Model model={show} modelType={modelType} details={details} credits={credits} />
+            <ModelOverview model={show} details={details} />
+            <MediaCrew crew={crew} />
+            <MediaCast cast={cast} />
         </>
     );
 }

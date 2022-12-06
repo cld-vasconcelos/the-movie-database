@@ -1,9 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 import { GetMovie, GetMovieCredits } from "../../helpers/movies";
 import Moment from 'moment';
-
 import './Movie.css';
-import Model from "../../components/Model/Model";
+import ModelOverview from "../../components/Model/ModelOverview/ModelOverview";
+import MediaCast from "../../components/MediaCast/MediaCast";
+import MediaCrew from "../../components/MediaCrew/MediaCrew";
 
 export async function loader({ params }) {
     const movie = await GetMovie(params.movieId);
@@ -22,7 +23,6 @@ export async function loader({ params }) {
 
 export default function Movie() {
     const { movie, credits } = useLoaderData();
-    const modelType = "movie";
     const details = [
         {
             key: "synopsys",
@@ -41,9 +41,14 @@ export default function Movie() {
         }
     ];
 
+    const crew = credits.crew.filter((crewMember) => crewMember.job === "Director");
+    const cast = credits.cast;
+
     return (
         <>
-            <Model model={movie} modelType={modelType} details={details} credits={credits} />
+            <ModelOverview model={movie} details={details} />
+            <MediaCrew crew={crew} />
+            <MediaCast cast={cast} />
         </>
     );
 }

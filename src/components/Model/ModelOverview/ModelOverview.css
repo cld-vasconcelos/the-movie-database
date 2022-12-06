@@ -1,0 +1,29 @@
+.model-overview {
+    display: inline-flex;
+    margin-bottom: 1rem;
+}
+
+.model-poster img {
+    width: 15rem;
+}
+
+.model-name {
+    font-size: 3rem;
+}
+
+.model-details {
+    margin: 1rem 2rem 0 0;
+    display: flex;
+}
+
+.model-details li {
+    padding-bottom: 1rem;
+}
+
+.model-details li:last-child {
+    padding-bottom: 0;
+}
+
+.model-detail-title {
+    font-weight: bold;
+}
