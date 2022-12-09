@@ -1,34 +1,26 @@
-import { apiGet } from "../service/api.js";
+import api from "../service/api.js";
 
 export async function getPopularMovies(page = 1) {
-    const route = "/movie/popular";
-    const params = [{ key: "page", value: page }];
-    return apiGet(route, params);
+    const route = "movie/popular";
+    const params = { page };
+    return api.get(route, { params }).then((response) => response.data);
 }
 
 export async function searchMovies(q, page = 1) {
     const route = "/search/movie";
-    const params = [
-        { 
-            key: "query", 
-            value: q 
-        },
-        { 
-            key: "page", 
-            value: page
-        }
-    ];
-    return apiGet(route, params);
+    const params = {
+        query: q,
+        page
+    }
+    return api.get(route, { params }).then((response) => response.data);
 }
 
 export async function getMovie(movieId) {
     const route = `/movie/${movieId}`;
-    const params = [];
-    return apiGet(route, params);
+    return api.get(route).then((response) => response.data);
 }
 
 export async function getMovieCredits(movieId) {
     const route = `/movie/${movieId}/credits`;
-    const params = [];
-    return apiGet(route, params);
+    return api.get(route).then((response) => response.data);
 }

@@ -6,8 +6,8 @@ import "./Pagination.css";
 export default function PaginationComponent(props) {
     const count = props.count;
     const onPageChange = props.onPageChange;
-
     const pageSize = props.pageSize || 10;
+
     const pageCount = Math.ceil(count / pageSize);
 
     const [pageIndex, setPageIndex] = useState(1);
