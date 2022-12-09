@@ -9,7 +9,6 @@ export async function loader() {
     const popularMovies = await getPopularMovies(1);
     const popularShows = await getPopularShows(1);
 
-    debugger
     const topMovies = popularMovies.results.slice(0, 5);
     const topShows = popularShows.results.slice(0, 5);
 
