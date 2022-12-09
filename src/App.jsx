@@ -2,7 +2,7 @@ import './App.css';
 
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
-import Root from './pages/Root/Root';
+import Root from './layout/Root/Root';
 import Home, { loader as homeLoader } from './pages/Home/Home';
 import Search, { loader as searchLoader } from './pages/Search/Search';
 import Movie, { loader as movieLoader } from './pages/Movie/Movie';
