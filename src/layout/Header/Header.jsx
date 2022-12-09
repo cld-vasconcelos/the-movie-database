@@ -28,14 +28,14 @@ export default function Header() {
     return (
         <>
             <div className="header-wrapper">
-                <div className="header-title" onClick={() => { redirectToHome(); }}>
+                <h1 className="header-title" onClick={() => { redirectToHome(); }}>
                     <div className="header-title-logo">
                         <img src={require("../../assets/images/logo.svg").default} alt="tmdb" />
                     </div>
                     <div className="header-title-text">
                         <span className="vertically-centered">The Movie Database</span>
                     </div>
-                </div>
+                </h1>
                 <div className="header-search">
                     <div className="vertically-centered header-search-input">
                         <form onSubmit={handleSubmit}>

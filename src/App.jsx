@@ -9,8 +9,7 @@ const router = createBrowserRouter(routes);
 function App() {
   return (
     <div className="app-wrapper">
-      <RouterProvider router={router}>
-      </RouterProvider>
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -13,9 +13,9 @@ export default function ModelOverview(props) {
                 />
             </div>
             <div style={{ margin: "0 2rem" }}>
-                <div className="model-name">
+                <h2 className="model-name">
                     {model.title || model.name}
-                </div>
+                </h2>
                 <div className="model-details">
                     <ul>
                         {model.details.map((detail) => (
