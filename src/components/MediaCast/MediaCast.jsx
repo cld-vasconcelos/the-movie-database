@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import config from "../../config";
-import PaginationComponent from "../Pagination/Pagination";
+import Paginator from "../Paginator/Paginator";
+
 import "./MediaCast.css";
 
 export default function MediaCast(props) {
@@ -47,8 +49,8 @@ export default function MediaCast(props) {
                             </li>
                         ))}
                     </ul>
-                    <div className="media-cast-pagination">
-                        <PaginationComponent
+                    <div className="media-cast-paginator">
+                        <Paginator
                             count={cast.length}
                             pageSize={castPageSize}
                             onPageChange={onCastPageChange}

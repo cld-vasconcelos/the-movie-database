@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import config from "../../config";
-import PaginationComponent from "../Pagination/Pagination";
+import Paginator from "../Paginator/Paginator";
+
 import "./PersonCreditList.css";
 
 export default function PersonCreditList(props) {
@@ -62,8 +64,8 @@ export default function PersonCreditList(props) {
                                 ))}
                             </ul>
                         </div>
-                        <div className="person-credits-pagination">
-                            <PaginationComponent count={credits.length} pageSize={creditsPageSize} onPageChange={onPersonCreditPageChange} />
+                        <div className="person-credits-paginator">
+                            <Paginator count={credits.length} pageSize={creditsPageSize} onPageChange={onPersonCreditPageChange} />
                         </div>
                     </>
                 ) : ""}
