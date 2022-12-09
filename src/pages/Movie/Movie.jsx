@@ -41,12 +41,14 @@ export default function Movie() {
         }
     ];
 
+    const model = {...movie, details: details };
+
     const crew = credits.crew.filter((crewMember) => crewMember.job === "Director");
     const cast = credits.cast;
 
     return (
         <>
-            <ModelOverview model={movie} details={details} />
+            <ModelOverview model={model} />
             <MediaCrew crew={crew} />
             <MediaCast cast={cast} />
         </>

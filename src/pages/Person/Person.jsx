@@ -46,9 +46,10 @@ export default function Person() {
     const castCredits = credits.cast;
     const crewCredits = credits.crew;
 
+    const model = { ...person, details };
     return (
         <>
-            <ModelOverview model={person} details={details} />
+            <ModelOverview model={model} />
             <div className="person-credits">
                 {castCredits.length > 0 ? (
                     <div className="person-cast">

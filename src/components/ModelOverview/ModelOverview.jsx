@@ -3,7 +3,6 @@ import "./ModelOverview.css";
 
 export default function ModelOverview(props) {
     const model = props.model;
-    const details = props.details;
     return (
         <div className="model-overview">
             <div className="model-poster">
@@ -19,7 +18,7 @@ export default function ModelOverview(props) {
                 </div>
                 <div className="model-details">
                     <ul>
-                        {details.map((detail) => (
+                        {model.details.map((detail) => (
                             <li key={detail.key}>
                                 <div className="model-detail-title">
                                     {detail.title}

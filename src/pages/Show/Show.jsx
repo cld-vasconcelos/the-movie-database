@@ -46,6 +46,8 @@ export default function Show() {
         }
     ];
 
+    const model = { ...show, details: details };
+
     const cast = credits.cast;
     const crew = show.created_by.map((createdBy) => ({
         ...createdBy,
@@ -54,7 +56,7 @@ export default function Show() {
 
     return (
         <>
-            <ModelOverview model={show} details={details} />
+            <ModelOverview model={model} />
             <MediaCrew crew={crew} />
             <MediaCast cast={cast} />
         </>
