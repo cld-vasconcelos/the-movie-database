@@ -20,29 +20,19 @@ describe("Home", () => {
     expect(within(lists[1]).getAllByRole("listitem").length).toBe(5);
   });
 
-  test("Clicking on a movie should go to the movie page", async () => {
+  test.each([
+    { listIndex: 0, media: { id: 436270, name: /black adam/i, type: "movie" } },
+    { listIndex: 1, media: { id: 119051, name: /wednesday/i, type: "tv" } }
+  ])("Clicking on a popular $media.type result should go to its page", async ({ listIndex, media }) => {
     const router = await setupTestingEnvironment();
 
     const lists = screen.getAllByRole("list");
-    const movie = within(lists[0]).getAllByRole("listitem")[0];
+    const mediaItem = within(lists[listIndex]).getAllByRole("listitem")[0];
 
-    userEvent.click(within(movie).getByRole("link"));
+    userEvent.click(within(mediaItem).getByRole("link"));
 
-    await waitFor(() => screen.getByRole("heading", { name: /black adam/i }));
+    await waitFor(() => screen.getByRole("heading", { name: media.name }));
 
-    expect(router.state.location.pathname).toBe("/movie/436270");
-  });
-
-  test("Clicking on a show should go to the show page", async () => {
-    const router = await setupTestingEnvironment();
-
-    const lists = screen.getAllByRole("list");
-    const show = within(lists[1]).getAllByRole("listitem")[0];
-
-    userEvent.click(within(show).getByRole("link"));
-
-    await waitFor(() => screen.getByRole("heading", { name: /wednesday/i }));
-
-    expect(router.state.location.pathname).toBe("/tv/119051");
+    expect(router.state.location.pathname).toBe(`/${media.type}/${media.id}`);
   });
 });

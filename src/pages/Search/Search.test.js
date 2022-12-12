@@ -42,18 +42,18 @@ describe("Search", () => {
     });
 
     test.each([
-        { listIndex: 0, modelType: "movie", modelName: /black adam/i },
-        { listIndex: 1, modelType: "tv", modelName: /wednesday/i },
-        { listIndex: 2, modelType: "person", modelName: /pierce brosnan/i }
-    ])('Clicking on a $modelType search result should go to its page', async ({ listIndex, modelType, modelName }) => {
+        { listIndex: 0, model: { type: "movie", name: /black adam/i } },
+        { listIndex: 1, model: { type: "tv", name: /wednesday/i } },
+        { listIndex: 2, model: { type: "person", name: /pierce brosnan/i } }
+    ])('Clicking on a $model.type search result should go to its page', async ({ listIndex, model }) => {
         const router = await setupSearch(true);
 
         const list = screen.getAllByRole("list")[listIndex * 2];
-        const model = within(list).getAllByRole("listitem")[0];
-        userEvent.click(model);
+        const modelItem = within(list).getAllByRole("listitem")[0];
+        userEvent.click(modelItem);
 
-        await waitFor(() => screen.getAllByRole("heading", { name: modelName }));
+        await waitFor(() => screen.getAllByRole("heading", { name: model.name }));
 
-        expect(router.state.location.pathname).toBe(`/${modelType}/${model.id}`);
+        expect(router.state.location.pathname).toBe(`/${model.type}/${modelItem.id}`);
     });
 })
