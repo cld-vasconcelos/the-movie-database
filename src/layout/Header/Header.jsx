@@ -38,8 +38,8 @@ export default function Header() {
                 </h1>
                 <div className="header-search">
                     <div className="vertically-centered header-search-input">
-                        <form onSubmit={handleSubmit}>
-                            <input type="text" placeholder="Search" value={query} onChange={handleChange} />
+                        <form name="search-form" onSubmit={handleSubmit}>
+                            <input type="search" placeholder="Search" value={query} onChange={handleChange} />
                         </form>
                     </div>
                 </div>
