@@ -1,42 +1,58 @@
-import { screen, waitFor } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import { setupTestingEnvironment } from "../../helpers/test";
 
-describe("Search", () => {
-    test("Submitting an empty search query should not change the page", async () => { 
-        const router = await setupTestingEnvironment();
-        const searchQuery = "";
-        const searchInput = screen.getByRole("searchbox");
+async function setupSearch(withQuery) {
+    const router = await setupTestingEnvironment();
+    const searchQuery = withQuery ? "black" : "";
+    const searchInput = screen.getByRole("searchbox");
 
-        userEvent.type(searchInput, `${searchQuery}{enter}`);
-        userEvent.click(searchInput);
+    userEvent.type(searchInput, `${searchQuery}{enter}`);
+    userEvent.click(searchInput);
+
+    if(withQuery) {
+        await waitFor(() => screen.getByRole("heading", { name: /search 'black'/i }));
+    }
+
+    return router;
+}
+
+describe("Search", () => {
+    test("Submitting an empty search query should not change the page", async () => {
+        const router = await setupSearch(false);
 
         expect(router.state.location.pathname).toBe("/");
         expect(router.state.location.search).toBe("");
     });
 
     test("Submitting a search query should redirect to the search page", async () => {
-        const router = await setupTestingEnvironment();
-        const searchQuery = "black";
-        const searchInput = screen.getByRole("searchbox");
-
-        userEvent.type(searchInput, `${searchQuery}{enter}`);
-        userEvent.click(searchInput);
-
-        await waitFor(() => screen.getByRole("heading", { name: /search 'black'/i }));
+        const router = await setupSearch(true);
 
         expect(router.state.location.pathname).toBe("/search");
-        expect(router.state.location.search).toBe(`?q=${searchQuery}`);
+        expect(router.state.location.search).toBe(`?q=black`);
 
         [/movies/i, /shows/i, /people/i].forEach(x => {
-            expect(screen.getByRole("heading", { name: x})).toBeInTheDocument();
+            expect(screen.getByRole("heading", { name: x })).toBeInTheDocument();
         });
     });
 
-    test("Clicking on a movie should go to the movie page", () => { });
+    test.each([
+        {listIndex: 0, modelType: "movie"},
+        {listIndex: 1, modelType: "tv"},
+        {listIndex: 2, modelType: "person"}
+      ])('Clicking on a $modelType search result should go to its page', async ({listIndex, modelType}) => {
+        const router = await setupSearch(true);
 
-    test("Clicking on a show should go to the movie page", () => { });
+        const list = screen.getAllByRole("list")[listIndex * 2];
+        const model = within(list).getAllByRole("listitem")[0];
+        userEvent.click(model);
 
-    test("Clicking on a person should go to the movie page", () => { });
+        const modelId = model.id;
+        const modelName = model.getElementsByClassName("search-result-name")[0].textContent;
+    
+        await waitFor(() => screen.getByRole("heading", { name: modelName }));
+
+        expect(router.state.location.pathname).toBe(`/${modelType}/${modelId}`);
+      });
 })

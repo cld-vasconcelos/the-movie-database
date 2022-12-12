@@ -34,7 +34,7 @@ export default function SearchResultList(props) {
                         <div className="search-result-list">
                             <ul>
                                 {searchResult.results.map((result) => (
-                                    <li key={result.id} onClick={() => { redirectTo(result, modelType) }}>
+                                    <li key={result.id} id={result.id} onClick={() => { redirectTo(result, modelType) }}>
                                         <div className="search-result-poster">
                                             <img
                                                 src={result.poster_path || result.profile_path ? `${config.imageBaseUrl}${result.poster_path || result.profile_path}` : require("../../assets/images/no-poster.jpeg")}
