@@ -40,7 +40,7 @@ describe("Home", () => {
     expect(within(lists[1]).getAllByRole("listitem").length).toBe(5);
   });
 
-  test("Clicking on movie should go to the movie page", async () => {
+  test("Clicking on a movie should go to the movie page", async () => {
     const router = await setup();
 
     const lists = screen.getAllByRole("list");
@@ -53,7 +53,7 @@ describe("Home", () => {
     expect(router.state.location.pathname).toBe("/movie/436270");
   });
 
-  test("Clicking on show should go to the show page", async () => {
+  test("Clicking on a show should go to the show page", async () => {
     const router = await setup();
 
     const lists = screen.getAllByRole("list");
