@@ -25,7 +25,18 @@ async function setup() {
 }
 
 describe("Search", () => {
-    test("Submitting an empty search query should not change the page", () => { });
+    test("Submitting an empty search query should not change the page", async () => { 
+        const router = await setup();
+        const searchQuery = "";
+        const searchInput = screen.getByRole("searchbox");
+
+        userEvent.type(searchInput, `${searchQuery}{enter}`);
+        userEvent.click(searchInput);
+
+        
+        expect(router.state.location.pathname).toBe("/");
+        expect(router.state.location.search).toBe("");
+    });
 
     test("Submitting a search query should redirect to the search page", async () => {
         const router = await setup();
@@ -40,7 +51,7 @@ describe("Search", () => {
         expect(router.state.location.pathname).toBe("/search");
         expect(router.state.location.search).toBe(`?q=${searchQuery}`);
 
-        await [/movies/i, /shows/i, /people/i].forEach(x => {
+        [/movies/i, /shows/i, /people/i].forEach(x => {
             expect(screen.getByRole("heading", { name: x})).toBeInTheDocument();
         });
     });
