@@ -11,7 +11,7 @@ describe("Home", () => {
     await setupTestingEnvironment();
 
     expect(screen.getByRole("heading", { name: /top movies/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /top TV/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /top tv/i })).toBeInTheDocument();
 
     const lists = screen.getAllByRole("list");
     expect(lists.length).toBe(2);

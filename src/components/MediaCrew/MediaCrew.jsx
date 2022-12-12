@@ -11,9 +11,7 @@ export default function MediaCrew(props) {
                     <ul>
                         {crewJobs.map((crewJob) => (
                             <li key={crewJob}>
-                                <div className="media-crew-job">
-                                    <b>{crewJob}</b>
-                                </div>
+                                <h4>{crewJob}</h4>
                                 {
                                     crew.filter((crewMember) => crewMember.job === crewJob).map((crewMember) => (
                                         <div key={crewMember.id}>

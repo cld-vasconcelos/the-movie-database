@@ -26,9 +26,7 @@ export default function MediaCast(props) {
         <>
             {castToDisplay?.length > 0 ? (
                 <>
-                    <div>
-                        <b>Cast</b>
-                    </div>
+                    <h4>Cast</h4>
                     <ul className="media-cast-list">
                         {castToDisplay.map((castMember) => (
                             <li key={castMember.id} onClick={() => redirectToPerson(castMember.id)}>

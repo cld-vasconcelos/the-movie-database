@@ -20,9 +20,9 @@ export default function ModelOverview(props) {
                     <ul>
                         {model.details.map((detail) => (
                             <li key={detail.key}>
-                                <div className="model-detail-title">
+                                <h6 className="model-detail-title">
                                     {detail.title}
-                                </div>
+                                </h6>
                                 <div className="model-detail-content">
                                     {detail.content}
                                 </div>

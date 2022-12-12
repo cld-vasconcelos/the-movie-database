@@ -3,9 +3,9 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 
 import routes from "../routes";
 
-export async function setupRouting() {
+export async function setupRouting(initialEntries) {
     const router = createMemoryRouter(routes, {
-        initialEntries: ["/"],
+        initialEntries,
     });
 
     render(<RouterProvider router={router} />);
@@ -15,8 +15,8 @@ export async function setupRouting() {
     return router;
 }
 
-export async function setupTestingEnvironment() {
-    const router = await setupRouting();
+export async function setupTestingEnvironment(initialEntries = ["/"]) {
+    const router = await setupRouting(initialEntries);
 
     return router;
 }
