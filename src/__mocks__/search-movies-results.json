@@ -1,0 +1,402 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+            "genre_ids": [
+                28,
+                14,
+                878
+            ],
+            "id": 436270,
+            "original_language": "en",
+            "original_title": "Black Adam",
+            "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+            "popularity": 6345.586,
+            "poster_path": "/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg",
+            "release_date": "2022-10-19",
+            "title": "Black Adam",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 2683
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 505642,
+            "original_language": "en",
+            "original_title": "Black Panther: Wakanda Forever",
+            "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+            "popularity": 2145.973,
+            "poster_path": "/ps2oKfhY6DL3alynlSqY97gHSsg.jpg",
+            "release_date": "2022-11-09",
+            "title": "Black Panther: Wakanda Forever",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 1292
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 284054,
+            "original_language": "en",
+            "original_title": "Black Panther",
+            "overview": "King T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without. Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantle to join with ex-girlfriend Nakia, the queen-mother, his princess-kid sister, members of the Dora Milaje (the Wakandan 'special forces') and an American secret agent, to prevent Wakanda from being dragged into a world war.",
+            "popularity": 239.558,
+            "poster_path": "/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+            "release_date": "2018-02-13",
+            "title": "Black Panther",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 19955
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/AfvIjhDu9p64jKcmohS4hsPG95Q.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 756999,
+            "original_language": "en",
+            "original_title": "The Black Phone",
+            "overview": "Finney Blake, a shy but clever 13-year-old boy, is abducted by a sadistic killer and trapped in a soundproof basement where screaming is of little use. When a disconnected phone on the wall begins to ring, Finney discovers that he can hear the voices of the killer’s previous victims. And they are dead set on making sure that what happened to them doesn’t happen to Finney.",
+            "popularity": 264.845,
+            "poster_path": "/lr11mCT85T1JanlgjMuhs9nMht4.jpg",
+            "release_date": "2022-06-22",
+            "title": "The Black Phone",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 3197
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6FbWhRR5B7OWVgzXuTkIFiaI2N3.jpg",
+            "genre_ids": [
+                28,
+                53
+            ],
+            "id": 848123,
+            "original_language": "fr",
+            "original_title": "Black Site",
+            "overview": "A group of officers based in a labyrinthine top-secret prison must fight for their lives against Hatchet, a brilliant and infamous high-value detainee. When he escapes, his mysterious and deadly agenda has far reaching and dire consequences.",
+            "popularity": 143.087,
+            "poster_path": "/ipn8khVVC4eToWiGf89WF9J5PJn.jpg",
+            "release_date": "2022-05-05",
+            "title": "Black Site",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 144
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/keIxh0wPr2Ymj0Btjh4gW7JJ89e.jpg",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "id": 497698,
+            "original_language": "en",
+            "original_title": "Black Widow",
+            "overview": "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.",
+            "popularity": 114.855,
+            "poster_path": "/ytnhzdwtj0YfC5NVWrrPRGSGZb7.jpg",
+            "release_date": "2021-07-07",
+            "title": "Black Widow",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 8396
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/jVsbzy5gj3McD8V6dDr7EMrLSqT.jpg",
+            "genre_ids": [
+                99
+            ],
+            "id": 1040330,
+            "original_language": "en",
+            "original_title": "Black Adam: Saviour or Destroyer?",
+            "overview": "Ahead of the release of upcoming fantasy film ‘Black Adam’, sit down with Dwayne Johnson as he discusses his starring role as the eponymous superhero.",
+            "popularity": 229.971,
+            "poster_path": "/sTuXDWacwdcMS7NNLaynkfVBZkr.jpg",
+            "release_date": "2022-10-15",
+            "title": "Black Adam: Saviour or Destroyer?",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 272
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fRrpOILyXuWaWLmqF7kXeMVwITQ.jpg",
+            "genre_ids": [
+                27,
+                28,
+                12
+            ],
+            "id": 522444,
+            "original_language": "en",
+            "original_title": "Black Water: Abyss",
+            "overview": "An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.",
+            "popularity": 75.287,
+            "poster_path": "/pmAv14TPE2vKMIRrVeCd1Ll7K94.jpg",
+            "release_date": "2020-07-09",
+            "title": "Black Water: Abyss",
+            "video": false,
+            "vote_average": 5.1,
+            "vote_count": 359
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uMBByiSDpgFwWVegAtwwnuzvogJ.jpg",
+            "genre_ids": [
+                14,
+                18,
+                10749
+            ],
+            "id": 297,
+            "original_language": "en",
+            "original_title": "Meet Joe Black",
+            "overview": "When the grim reaper comes to collect the soul of megamogul Bill Parrish, he arrives with a proposition: Host him for a \"vacation\" among the living in trade for a few more days of existence. Parrish agrees, and using the pseudonym Joe Black, Death begins taking part in Parrish's daily agenda and falls in love with the man's daughter. Yet when Black's holiday is over, so is Parrish's life.",
+            "popularity": 81.946,
+            "poster_path": "/fDPAjvfPMomkKF7cMRmL5Anak61.jpg",
+            "release_date": "1998-11-12",
+            "title": "Meet Joe Black",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 4156
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wM1aNIXSqB8GSeQY38LOUHYMYIw.jpg",
+            "genre_ids": [
+                28,
+                12,
+                35,
+                878
+            ],
+            "id": 607,
+            "original_language": "en",
+            "original_title": "Men in Black",
+            "overview": "After a police chase with an otherworldly being, a New York City cop is recruited as an agent in a top-secret organization established to monitor and police alien activity on Earth: the Men in Black. Agent Kay and new recruit Agent Jay find themselves in the middle of a deadly plot by an intergalactic terrorist who has arrived on Earth to assassinate two ambassadors from opposing galaxies.",
+            "popularity": 50.931,
+            "poster_path": "/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
+            "release_date": "1997-07-02",
+            "title": "Men in Black",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 12080
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qxTw8OKJLRX1Xb5nR5CcIDnLKoq.jpg",
+            "genre_ids": [
+                18,
+                53,
+                27
+            ],
+            "id": 44214,
+            "original_language": "en",
+            "original_title": "Black Swan",
+            "overview": "A journey through the psyche of a young ballerina whose starring role as the duplicitous swan queen turns out to be a part for which she becomes frighteningly perfect.",
+            "popularity": 39.85,
+            "poster_path": "/8XYghKF0xkxp5A7QtK2F5vffdpZ.jpg",
+            "release_date": "2010-12-03",
+            "title": "Black Swan",
+            "video": false,
+            "vote_average": 7.7,
+            "vote_count": 12804
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7GWDrjxeBsh5onaYf5XHjIM9BA1.jpg",
+            "genre_ids": [
+                18,
+                28,
+                53
+            ],
+            "id": 578189,
+            "original_language": "en",
+            "original_title": "Black and Blue",
+            "overview": "A rookie cop inadvertently captures the murder of a young drug dealer on her body cam. After realizing that the murder was committed by corrupt cops, she teams up with the one person from her community who is willing to help her as she tries to escape both the criminals out for revenge and the police who are desperate to destroy the incriminating footage.",
+            "popularity": 48.527,
+            "poster_path": "/1cSHEKYYP8Dpi4o1iBVd4U75FYt.jpg",
+            "release_date": "2019-10-25",
+            "title": "Black and Blue",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 692
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/c8Jpcdk6ROqqy9CSv1j9PLehyXi.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 31977,
+            "original_language": "hi",
+            "original_title": "Black",
+            "overview": "Black is an adaptation of Helen Keller's autobiography. Black revolves around a blind and deaf girl, and her relationship with her teacher who himself later develops Alzheimer's disease.",
+            "popularity": 16.36,
+            "poster_path": "/7RtfmW00zS4bgMECJYo32fxaAhL.jpg",
+            "release_date": "2005-02-04",
+            "title": "Black",
+            "video": false,
+            "vote_average": 7.7,
+            "vote_count": 169
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2FYzxgLNuNVwncilzUeCGbOQzP7.jpg",
+            "genre_ids": [
+                35,
+                878,
+                28
+            ],
+            "id": 479455,
+            "original_language": "en",
+            "original_title": "Men in Black: International",
+            "overview": "The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.",
+            "popularity": 38.771,
+            "poster_path": "/dPrUPFcgLfNbmDL8V69vcrTyEfb.jpg",
+            "release_date": "2019-06-12",
+            "title": "Men in Black: International",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 4144
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5AhpUb8CAP0jZ4Wrn7AsRUYjZxB.jpg",
+            "genre_ids": [
+                28,
+                35,
+                878
+            ],
+            "id": 41154,
+            "original_language": "en",
+            "original_title": "Men in Black 3",
+            "overview": "Agents J and K are back...in time. J has seen some inexplicable things in his 15 years with the Men in Black, but nothing, not even aliens, perplexes him as much as his wry, reticent partner. But when K's life and the fate of the planet are put at stake, Agent J will have to travel back in time to put things right. J discovers that there are secrets to the universe that K never told him - secrets that will reveal themselves as he teams up with the young Agent K to save his partner, the agency, and the future of humankind.",
+            "popularity": 46.38,
+            "poster_path": "/90DdoEStzeObs96fsYf4GG544iN.jpg",
+            "release_date": "2012-05-23",
+            "title": "Men in Black 3",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 9156
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lm6ud0qm4PPvA2lQw9fC5LtCzOV.jpg",
+            "genre_ids": [
+                28,
+                12,
+                35,
+                878
+            ],
+            "id": 608,
+            "original_language": "en",
+            "original_title": "Men in Black II",
+            "overview": "Kay and Jay reunite to provide our best, last and only line of defense against a sinister seductress who levels the toughest challenge yet to the MIB's untarnished mission statement – protecting Earth from the scum of the universe. It's been four years since the alien-seeking agents averted an intergalactic disaster of epic proportions. Now it's a race against the clock as Jay must convince Kay – who not only has absolutely no memory of his time spent with the MIB, but is also the only living person left with the expertise to save the galaxy – to reunite with the MIB before the earth submits to ultimate destruction.",
+            "popularity": 46.619,
+            "poster_path": "/enA22EPyzc2WQ1VVyY7zxresQQr.jpg",
+            "release_date": "2002-07-03",
+            "title": "Men in Black II",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 8693
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zhRCgJJqNyMV3GZjk5YX61IV7SU.jpg",
+            "genre_ids": [
+                27,
+                53,
+                9648
+            ],
+            "id": 9656,
+            "original_language": "en",
+            "original_title": "Black Christmas",
+            "overview": "An escaped maniac returns to his childhood home on Christmas Eve, which is now a sorority house, and begins to murder the sorority sisters one by one.",
+            "popularity": 21.86,
+            "poster_path": "/de7ca1V0CLkWnCySrZWgnwT2EiV.jpg",
+            "release_date": "2006-12-15",
+            "title": "Black Christmas",
+            "video": false,
+            "vote_average": 5.2,
+            "vote_count": 432
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/35X6MDrK7rpRu4Ae5oAPVjPKo1k.jpg",
+            "genre_ids": [
+                28,
+                36,
+                10752
+            ],
+            "id": 855,
+            "original_language": "en",
+            "original_title": "Black Hawk Down",
+            "overview": "When U.S. Rangers and an elite Delta Force team attempt to kidnap two underlings of a Somali warlord, their Black Hawk helicopters are shot down, and the Americans suffer heavy casualties, facing intense fighting from the militia on the ground.",
+            "popularity": 33.316,
+            "poster_path": "/7fU5dSqKRL4XHeEUz62rCKBfYok.jpg",
+            "release_date": "2001-12-28",
+            "title": "Black Hawk Down",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 4812
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/quxidIBA4BNKRbk03JBRzu586Ep.jpg",
+            "genre_ids": [
+                10749,
+                35
+            ],
+            "id": 351819,
+            "original_language": "en",
+            "original_title": "Fifty Shades of Black",
+            "overview": "An inexperienced college student meets a wealthy businessman whose sexual practices put a strain on their relationship.",
+            "popularity": 46.224,
+            "poster_path": "/fYRiZ3vJuuCYb9H7HXfpjKO9Jd6.jpg",
+            "release_date": "2016-01-28",
+            "title": "Fifty Shades of Black",
+            "video": false,
+            "vote_average": 4.9,
+            "vote_count": 1201
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hrUYRjmMniDyxAsuXhhNC4vrfck.jpg",
+            "genre_ids": [
+                18,
+                80,
+                36
+            ],
+            "id": 261023,
+            "original_language": "en",
+            "original_title": "Black Mass",
+            "overview": "The true story of Whitey Bulger, the brother of a state senator and the most infamous violent criminal in the history of South Boston, who became an FBI informant to take down a Mafia family invading his turf.",
+            "popularity": 20.073,
+            "poster_path": "/zfwciv4LIJkNQsfuhYGv0Nkiweg.jpg",
+            "release_date": "2015-09-04",
+            "title": "Black Mass",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 2954
+        }
+    ],
+    "total_pages": 212,
+    "total_results": 4240
+}

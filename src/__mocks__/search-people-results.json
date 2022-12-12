@@ -1,0 +1,1390 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 70851,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/vndouqEyQqpvvk0FwIlkfceblrh.jpg",
+                    "genre_ids": [
+                        28,
+                        12,
+                        16,
+                        10751,
+                        35
+                    ],
+                    "id": 9502,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Kung Fu Panda",
+                    "overview": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five -- Tigress, Crane, Mantis, Viper and Monkey -- to give it a try.",
+                    "poster_path": "/xCn3VOST64XpOA8x0gaQkQiZtZY.jpg",
+                    "release_date": "2008-06-04",
+                    "title": "Kung Fu Panda",
+                    "video": false,
+                    "vote_average": 7.2,
+                    "vote_count": 9790
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/7BdxZXbSkUiVeCRXKD3hi9KYeWm.jpg",
+                    "genre_ids": [
+                        16,
+                        10751
+                    ],
+                    "id": 49444,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Kung Fu Panda 2",
+                    "overview": "Po is now living his dream as The Dragon Warrior, protecting the Valley of Peace alongside his friends and fellow kung fu masters, The Furious Five - Tigress, Crane, Mantis, Viper and Monkey. But Po’s new life of awesomeness is threatened by the emergence of a formidable villain, who plans to use a secret, unstoppable weapon to conquer China and destroy kung fu. It is up to Po and The Furious Five to journey across China to face this threat and vanquish it. But how can Po stop a weapon that can stop kung fu? He must look to his past and uncover the secrets of his mysterious origins; only then will he be able to unlock the strength he needs to succeed.",
+                    "poster_path": "/mtqqD00vB4PGRt20gWtGqFhrkd0.jpg",
+                    "release_date": "2011-05-25",
+                    "title": "Kung Fu Panda 2",
+                    "video": false,
+                    "vote_average": 6.9,
+                    "vote_count": 5877
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/uT5G4fA7jKxlJNfwYPMm353f5AI.jpg",
+                    "genre_ids": [
+                        28,
+                        12,
+                        16,
+                        35,
+                        10751
+                    ],
+                    "id": 140300,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Kung Fu Panda 3",
+                    "overview": "Continuing his \"legendary adventures of awesomeness\", Po must face two hugely epic, but different threats: one supernatural and the other a little closer to his home.",
+                    "poster_path": "/pKrwkydrXKDX9rpMdzwqFQQLRfI.jpg",
+                    "release_date": "2016-01-23",
+                    "title": "Kung Fu Panda 3",
+                    "video": false,
+                    "vote_average": 6.9,
+                    "vote_count": 4919
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Jack Black",
+            "popularity": 49.752,
+            "profile_path": "/rtCx0fiYxJVhzXXdwZE2XRTfIKE.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 155,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/dMARcKLrv0T7kVJ4iQR3vqTTdtT.jpg",
+                    "genre_ids": [
+                        28,
+                        80,
+                        18,
+                        53
+                    ],
+                    "id": 9615,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Fast and the Furious: Tokyo Drift",
+                    "overview": "In order to avoid a jail sentence, Sean Boswell heads to Tokyo to live with his military father. In a low-rent section of the city, Shaun gets caught up in the underground world of drift racing",
+                    "poster_path": "/cm2ffqb3XovzA5ZSzyN3jnn8qv0.jpg",
+                    "release_date": "2006-06-03",
+                    "title": "The Fast and the Furious: Tokyo Drift",
+                    "video": false,
+                    "vote_average": 6.4,
+                    "vote_count": 5643
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/jGyIsNQBQ17G92ZxuTErrMl6W1e.jpg",
+                    "genre_ids": [
+                        27,
+                        28,
+                        14
+                    ],
+                    "id": 22894,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Legion",
+                    "overview": "When God loses faith in humankind, he sends his legion of angels to bring on the Apocalypse. Humanity's only hope for survival lies in a group of strangers trapped in an out-of-the-way, desert diner with the Archangel Michael.",
+                    "poster_path": "/ykocDqwg5PRUopnBVb1x1DWnEJF.jpg",
+                    "release_date": "2010-01-21",
+                    "title": "Legion",
+                    "video": false,
+                    "vote_average": 5.8,
+                    "vote_count": 2214
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/cHkhb5A4gQRK6zs6Pv7zorHs8Nk.jpg",
+                    "genre_ids": [
+                        28,
+                        53,
+                        80,
+                        12
+                    ],
+                    "id": 168259,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Furious 7",
+                    "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+                    "poster_path": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg",
+                    "release_date": "2015-04-01",
+                    "title": "Furious 7",
+                    "video": false,
+                    "vote_average": 7.2,
+                    "vote_count": 9405
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Lucas Black",
+            "popularity": 18.914,
+            "profile_path": "/w2oImwC4Y0RDtyvaKGTCFCKsvwh.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 26054,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/uQ1NLTPJ7g1Skg4eD9vHh3RTRlm.jpg",
+                    "genre_ids": [
+                        53,
+                        878,
+                        28
+                    ],
+                    "id": 2787,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Pitch Black",
+                    "overview": "When their ship crash-lands on a remote planet, the marooned passengers soon learn that escaped convict Riddick isn't the only thing they have to fear. Deadly creatures lurk in the shadows, waiting to attack in the dark, and the planet is rapidly plunging into the utter blackness of a total eclipse. With the body count rising, the doomed survivors are forced to turn to Riddick with his eerie eyes to guide them through the darkness to safety. With time running out, there's only one rule: Stay in the light.",
+                    "poster_path": "/3AnlxZ5CZnhKKzjgFyY6EHxmOyl.jpg",
+                    "release_date": "2000-02-18",
+                    "title": "Pitch Black",
+                    "video": false,
+                    "vote_average": 6.8,
+                    "vote_count": 3817
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/6B2tOYhaIpv3kPKBkvdebX624Gw.jpg",
+                    "genre_ids": [
+                        16,
+                        35,
+                        10751,
+                        37,
+                        12
+                    ],
+                    "id": 44896,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Rango",
+                    "overview": "When Rango, a lost family pet, accidentally winds up in the gritty, gun-slinging town of Dirt, the less-than-courageous lizard suddenly finds he stands out. Welcomed as the last hope the town has been waiting for, new Sheriff Rango is forced to play his new role to the hilt.",
+                    "poster_path": "/h9GJiKuuJ650dte0gyzLD3ILcIh.jpg",
+                    "release_date": "2011-03-02",
+                    "title": "Rango",
+                    "video": false,
+                    "vote_average": 6.8,
+                    "vote_count": 5569
+                },
+                {
+                    "backdrop_path": "/b1Mh03Aeu4IlGvdNm10cbQQxt95.jpg",
+                    "first_air_date": "2013-10-03",
+                    "genre_ids": [
+                        10765,
+                        18,
+                        9648
+                    ],
+                    "id": 46896,
+                    "media_type": "tv",
+                    "name": "The Originals",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "The Originals",
+                    "overview": "A spin-off from The Vampire Diaries and set in New Orleans, The Originals centers on the Mikaelson siblings, otherwise known as the world's original vampires: Klaus, Elijah, and Rebekah. Now Klaus must take down his protégé, Marcel, who is now in charge of New Orleans, in order to re-take his city, as he originally built New Orleans. Klaus departed from the city after being chased down by his father Mikael, while it was being constructed and Marcel took charge. As Klaus has returned after many years, his ego has provoked him to become the king of the city. \"Every King needs an heir\" says Klaus, accepting the unborn child. The child is a first to be born to a hybrid and a werewolf.",
+                    "poster_path": "/2llbXc2BOkLkBGgcNJCRbrWedUO.jpg",
+                    "vote_average": 8.6,
+                    "vote_count": 2900
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Claudia Black",
+            "popularity": 11.789,
+            "profile_path": "/eIYn2naiftYwPnclwcYgyWkEtuA.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 8963,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/sFsBX1iJabxVfJon8dKLF9Lpibh.jpg",
+                    "genre_ids": [
+                        27,
+                        80
+                    ],
+                    "id": 2662,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "House of 1000 Corpses",
+                    "overview": "Two teenage couples traveling across the backwoods of Texas searching for urban legends of serial killers end up as prisoners of a bizarre and sadistic backwater family of serial killers.",
+                    "poster_path": "/afISpRBO81uaLy5hrMHqyof6C1J.jpg",
+                    "release_date": "2003-04-11",
+                    "title": "House of 1000 Corpses",
+                    "video": false,
+                    "vote_average": 6.2,
+                    "vote_count": 1321
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/xm9BCrsZ1W0kBkA93KtZ9nGqOFN.jpg",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 26617,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Five Easy Pieces",
+                    "overview": "A drop-out from upper-class America picks up work along the way on oil-rigs when his life isn't spent in a squalid succession of bars, motels, and other points of interest.",
+                    "poster_path": "/AciLTjLqyHiEA0lq35CV4Atnm4v.jpg",
+                    "release_date": "1970-09-12",
+                    "title": "Five Easy Pieces",
+                    "video": false,
+                    "vote_average": 7.2,
+                    "vote_count": 400
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/sve315CAjMhSZBKBthDHJI77gmb.jpg",
+                    "genre_ids": [
+                        27,
+                        53,
+                        9648
+                    ],
+                    "id": 13549,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Burnt Offerings",
+                    "overview": "A couple and their 12-year-old son move into a giant house for the summer. Things start acting strange almost immediately. It seems that every time someone gets hurt on the grounds, the beat-up house seems to repair itself.",
+                    "poster_path": "/2ipG69lXOjGMX7F7qxJQzUoiUsd.jpg",
+                    "release_date": "1976-10-18",
+                    "title": "Burnt Offerings",
+                    "video": false,
+                    "vote_average": 6.6,
+                    "vote_count": 188
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Karen Black",
+            "popularity": 9.464,
+            "profile_path": "/2FUHvpCZ8A3we7yaEvIK8r06fCL.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 1108,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/tKa1gmGKAUVYnflYcadipeL3d9h.jpg",
+                    "genre_ids": [
+                        28,
+                        12,
+                        878
+                    ],
+                    "id": 68721,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Iron Man 3",
+                    "overview": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+                    "poster_path": "/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+                    "release_date": "2013-04-18",
+                    "title": "Iron Man 3",
+                    "video": false,
+                    "vote_average": 6.9,
+                    "vote_count": 20096
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/q4mDG8YipONbKgFMJPgwNesixD4.jpg",
+                    "genre_ids": [
+                        35,
+                        80,
+                        28
+                    ],
+                    "id": 290250,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Nice Guys",
+                    "overview": "A private eye investigates the apparent suicide of a fading porn star in 1970s Los Angeles and uncovers a conspiracy.",
+                    "poster_path": "/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+                    "release_date": "2016-05-15",
+                    "title": "The Nice Guys",
+                    "video": false,
+                    "vote_average": 7.1,
+                    "vote_count": 6739
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/f4E0ocYeToEuXvczZv6QArrMDJ.jpg",
+                    "genre_ids": [
+                        878,
+                        28,
+                        12
+                    ],
+                    "id": 346910,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Predator",
+                    "overview": "When a young boy accidentally triggers the universe's most lethal hunters' return to Earth, only a ragtag crew of ex-soldiers and a disgruntled scientist can prevent the end of the human race.",
+                    "poster_path": "/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg",
+                    "release_date": "2018-09-05",
+                    "title": "The Predator",
+                    "video": false,
+                    "vote_average": 5.6,
+                    "vote_count": 4003
+                }
+            ],
+            "known_for_department": "Writing",
+            "name": "Shane Black",
+            "popularity": 5.578,
+            "profile_path": "/fafBg8LjtQqsXyFg8ZgW7DHQXKt.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 1010799,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/3C6hamStn5HHTNmGmXmmGKHFWhT.jpg",
+                    "genre_ids": [
+                        35,
+                        10749
+                    ],
+                    "id": 475303,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "A Rainy Day in New York",
+                    "overview": "Two young people arrive in New York to spend a weekend, but once they arrive they're met with bad weather and a series of adventures.",
+                    "poster_path": "/z4A6mFOLTMZAhCSPRyrtzG0SPbd.jpg",
+                    "release_date": "2019-07-26",
+                    "title": "A Rainy Day in New York",
+                    "video": false,
+                    "vote_average": 6.5,
+                    "vote_count": 1944
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/jqz8FwISQfyum47PUqgPTGtmiMk.jpg",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 627725,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Banker",
+                    "overview": "In the 1960s, two entrepreneurs hatch an ingenious business plan to fight for housing integration—and equal access to the American Dream.",
+                    "poster_path": "/biXzsw22U6vSd0XktmZwAOc4uik.jpg",
+                    "release_date": "2020-03-06",
+                    "title": "The Banker",
+                    "video": false,
+                    "vote_average": 7.6,
+                    "vote_count": 642
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/o44QmvrLoBhCjrr8KUgFTZNlGvS.jpg",
+                    "genre_ids": [
+                        18,
+                        53,
+                        10770
+                    ],
+                    "id": 318553,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Sugar Daddies",
+                    "overview": "When a girl with a promising future finds herself in financial straits, she makes an agreement with an older man and struggles to keep it secret.",
+                    "poster_path": "/WlLTpdyUgv22oHkB3AvWPDN0Zv.jpg",
+                    "release_date": "2014-12-23",
+                    "title": "Sugar Daddies",
+                    "video": false,
+                    "vote_average": 4.8,
+                    "vote_count": 26
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Taylor Black",
+            "popularity": 5.226,
+            "profile_path": "/bb35VIXBarNRF4RBSf5CG0p3WRZ.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 173996,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/eU3HxRTWqoSG4idsYj8zD9UGan.jpg",
+                    "genre_ids": [
+                        28,
+                        80,
+                        53
+                    ],
+                    "id": 9705,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Swordfish",
+                    "overview": "Rogue agent Gabriel Shear is determined to get his mitts on $9 billion stashed in a secret Drug Enforcement Administration account. He wants the cash to fight terrorism, but lacks the computer skills necessary to hack into the government mainframe. Enter Stanley Jobson, a n'er-do-well encryption expert who can log into anything.",
+                    "poster_path": "/mM6h4jMqC4q5IaFgBIGKQDLnRU.jpg",
+                    "release_date": "2001-06-07",
+                    "title": "Swordfish",
+                    "video": false,
+                    "vote_average": 6.2,
+                    "vote_count": 2288
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/s0qZzP3kiL6QQYho259LghA3MXu.jpg",
+                    "genre_ids": [
+                        53
+                    ],
+                    "id": 256347,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Not Safe for Work",
+                    "overview": "Tom, a legal firm assistant, spots a suspicious man outside the court and follows him. Later, he gets trapped in a building with the same man who turns out to be a hitman.",
+                    "poster_path": "/eJFyV1CF3TWubqMEWjtRCL1jrc3.jpg",
+                    "release_date": "2014-05-09",
+                    "title": "Not Safe for Work",
+                    "video": false,
+                    "vote_average": 5.4,
+                    "vote_count": 106
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/1khytE1x9z7whNJxFQWpB0Xcw5r.jpg",
+                    "genre_ids": [
+                        80,
+                        18,
+                        27
+                    ],
+                    "id": 34081,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Ted Bundy",
+                    "overview": "Docu-drama based on the life of Ted Bundy, a serial killer who killed at least 19 young women during the 1970's (though some sources say as many as 30 to 35 were murdered). Set from his college student years, to his first victims, his capture, escape from prison (twice), his final killing spree to his trial, conviction and execution.",
+                    "poster_path": "/bh6wHjHxmuSyYL8jSFqtLlzMSGq.jpg",
+                    "release_date": "2002-11-22",
+                    "title": "Ted Bundy",
+                    "video": false,
+                    "vote_average": 5.8,
+                    "vote_count": 128
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Marina Black",
+            "popularity": 3.709,
+            "profile_path": "/qrSai8w4RCcoRNtbkzSQ5FHB53B.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 59258,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/jJKZaTBNenlFclQyjrnvzkRmvWE.jpg",
+                    "genre_ids": [
+                        16,
+                        10751,
+                        12,
+                        18,
+                        35
+                    ],
+                    "id": 150540,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Inside Out",
+                    "overview": "Growing up can be a bumpy road, and it's no exception for Riley, who is uprooted from her Midwest life when her father starts a new job in San Francisco. Riley's guiding emotions— Joy, Fear, Anger, Disgust and Sadness—live in Headquarters, the control centre inside Riley's mind, where they help advise her through everyday life and tries to keep things positive, but the emotions conflict on how best to navigate a new city, house and school.",
+                    "poster_path": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+                    "release_date": "2015-06-09",
+                    "title": "Inside Out",
+                    "video": false,
+                    "vote_average": 7.9,
+                    "vote_count": 18435
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/lIr1IYxjpJnteDjnw9iqTfO4ybQ.jpg",
+                    "genre_ids": [
+                        35,
+                        10751
+                    ],
+                    "id": 18147,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Unaccompanied Minors",
+                    "overview": "Five disparate kids snowed in at the airport on Christmas Eve learn some lessons about friendship when they launch a bid to get back to their families and outsmart a disgruntled airport official who wants to keep them grounded.",
+                    "poster_path": "/7yhaXxwxs1fIOyuPv3YuE2fea0t.jpg",
+                    "release_date": "2006-12-08",
+                    "title": "Unaccompanied Minors",
+                    "video": false,
+                    "vote_average": 6,
+                    "vote_count": 255
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/x5urpsiGEWRohAZtfvXZox5VGxD.jpg",
+                    "genre_ids": [
+                        35
+                    ],
+                    "id": 9788,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Accepted",
+                    "overview": "A high school slacker who's rejected by every school he applies to opts to create his own institution of higher learning, the South Harmon Institute of Technology, on a rundown piece of property near his hometown.",
+                    "poster_path": "/pMh1dCw5vhMATmJs0ve0OpoSVED.jpg",
+                    "release_date": "2006-08-18",
+                    "title": "Accepted",
+                    "video": false,
+                    "vote_average": 6.4,
+                    "vote_count": 1321
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Lewis Black",
+            "popularity": 3.59,
+            "profile_path": "/w29RsqphdfcG76jw0dHuGNtZOIA.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 154694,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/no2cllXSRA56LPipQnuPlg3RuTL.jpg",
+                    "genre_ids": [
+                        14,
+                        28
+                    ],
+                    "id": 557,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Spider-Man",
+                    "overview": "After being bitten by a genetically altered spider at Oscorp, nerdy but endearing high school student Peter Parker is endowed with amazing powers to become the superhero known as Spider-Man.",
+                    "poster_path": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+                    "release_date": "2002-05-01",
+                    "title": "Spider-Man",
+                    "video": false,
+                    "vote_average": 7.3,
+                    "vote_count": 16437
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/xLVk9A6FL5vwNvBkWgL370bFsZi.jpg",
+                    "genre_ids": [
+                        35,
+                        14,
+                        10749
+                    ],
+                    "id": 10096,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "13 Going on 30",
+                    "overview": "After total humiliation at her thirteenth birthday party, Jenna Rink wants to just hide until she's thirty. With a little magic, her wish is granted, but it turns out that being thirty isn't as always as awesome as she thought it would be!",
+                    "poster_path": "/iNZdSIfhSCMtRILDNyhLn8UKeSG.jpg",
+                    "release_date": "2004-04-13",
+                    "title": "13 Going on 30",
+                    "video": false,
+                    "vote_average": 6.7,
+                    "vote_count": 4434
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/4CHgcqU0A1uaWu821dmfA4DkNgw.jpg",
+                    "genre_ids": [
+                        35,
+                        12,
+                        10749
+                    ],
+                    "id": 9683,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Bubble Boy",
+                    "overview": "Jimmy is a young man who was born without an immune system and has lived his life within a plastic bubble in his bedroom... who pines for the sweet caresses of girl-next-door Chloe. But when Chloe decides to marry her high school boyfriend, Jimmy – bubble suit and all – treks cross-country to stop her.",
+                    "poster_path": "/tFwvUSc8g0HHvDOBQ2rvC9LWVSj.jpg",
+                    "release_date": "2001-08-24",
+                    "title": "Bubble Boy",
+                    "video": false,
+                    "vote_average": 5.7,
+                    "vote_count": 487
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Alex Black",
+            "popularity": 3.336,
+            "profile_path": "/mgenA1xwMvCDQjOQ14mJdFnxXJH.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 1380163,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/kQGxGXzYiCumY8kmXXpgbZyZQK8.jpg",
+                    "genre_ids": [
+                        80,
+                        18,
+                        9648,
+                        53
+                    ],
+                    "id": 395834,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Wind River",
+                    "overview": "An FBI agent teams with the town's veteran game tracker to investigate a murder that occurred on a Native American reservation.",
+                    "poster_path": "/pySivdR845Hom4u4T2WNkJxe6Ad.jpg",
+                    "release_date": "2017-08-03",
+                    "title": "Wind River",
+                    "video": false,
+                    "vote_average": 7.4,
+                    "vote_count": 4407
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/mRdXdjcFjWYZHTSHBDxh1tUvhCb.jpg",
+                    "genre_ids": [
+                        28,
+                        18,
+                        53
+                    ],
+                    "id": 787723,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "13 Minutes",
+                    "overview": "As a new day begins in the small American town of Minninnewah, the residents start their day as ordinary as the next. Mother Nature, however, has other plans for them. Inhabitants have just 13 minutes to seek shelter before the largest tornado on record ravages the town, leaving them struggling to protect their loved ones and fighting for their lives. Left to deal with the aftermath, four families must overcome their differences and find strength in each other in order to survive.",
+                    "poster_path": "/6j8DKmvVY8uQyXm7uiYcQZ897Rw.jpg",
+                    "release_date": "2021-10-29",
+                    "title": "13 Minutes",
+                    "video": false,
+                    "vote_average": 6.3,
+                    "vote_count": 123
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/QRGnSu6DhOwEYbXa3tdKOHpzSp.jpg",
+                    "genre_ids": [
+                        80,
+                        18
+                    ],
+                    "id": 519674,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Bygone",
+                    "overview": "When a young rancher crosses paths with a Lakota girl from a nearby reservation, her mysterious disappearance sparks a search that uncovers a harrowing past and hints at a dire future.",
+                    "poster_path": "/aojffTKjmQYFKIitUKHG5MD6yE5.jpg",
+                    "release_date": "2019-10-26",
+                    "title": "The Bygone",
+                    "video": false,
+                    "vote_average": 6.8,
+                    "vote_count": 37
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Tokala Black Elk",
+            "popularity": 5.277,
+            "profile_path": "/fZ4wmUVQdyfRCHpcWKeAyyvdc9g.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 515628,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/9WO1YGgDrKamuEmurOfrqZhZYrc.jpg",
+                    "genre_ids": [
+                        878,
+                        53,
+                        18
+                    ],
+                    "id": 227719,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Project Almanac",
+                    "overview": "A group of teens discover secret plans of a time machine, and construct one. However, things start to get out of control.",
+                    "poster_path": "/druhu1nf5Ad005hw9np1C2YrXHq.jpg",
+                    "release_date": "2015-01-28",
+                    "title": "Project Almanac",
+                    "video": false,
+                    "vote_average": 6.7,
+                    "vote_count": 2222
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/zNTIU2hB7OHJmT6zpyYFLBzY4HO.jpg",
+                    "genre_ids": [
+                        18,
+                        27,
+                        878
+                    ],
+                    "id": 336455,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Viral",
+                    "overview": "Following the outbreak of a virus that wipes out the majority of the human population, a young woman documents her family's new life in quarantine and tries to protect her infected sister.",
+                    "poster_path": "/4XLUXRn0Du0xGPUitSuTTT9a8lF.jpg",
+                    "release_date": "2016-02-18",
+                    "title": "Viral",
+                    "video": false,
+                    "vote_average": 5.7,
+                    "vote_count": 442
+                },
+                {
+                    "backdrop_path": "/t73x5Pb81mIGZR417aeGwbkR520.jpg",
+                    "first_air_date": "2020-12-06",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 86430,
+                    "media_type": "tv",
+                    "name": "Your Honor",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "Your Honor",
+                    "overview": "New Orleans judge Michael Desiato is forced to confront his own deepest convictions when his son is involved in a hit and run that embroils an organized crime family.",
+                    "poster_path": "/5NDs12paqvz4Jug3f13fC9XmSVN.jpg",
+                    "vote_average": 8.2,
+                    "vote_count": 1223
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Sofia Black-D'Elia",
+            "popularity": 8.121,
+            "profile_path": "/4fFr8QkAGx7e9mRVp4zLGl9M8PV.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 948351,
+            "known_for": [
+                {
+                    "backdrop_path": "/ulmOoXIsaTMAD9hMBoF9lXouy8v.jpg",
+                    "first_air_date": "2012-09-25",
+                    "genre_ids": [
+                        35,
+                        16
+                    ],
+                    "id": 44169,
+                    "media_type": "tv",
+                    "name": "Brickleberry",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "Brickleberry",
+                    "overview": "Brickleberry National Park is facing closure, but not if the park’s dysfunctional park rangers can help it!\n\n“Brickleberry,” an animated half-hour series, follows the crazy bunch of park rangers as they do their worst to keep the park running. Steve (David Herman) has been “Ranger of the Month” every month for years, so he feels threatened when Ethel (Natasha Leggero) is transferred from Yellowstone National Park to help whip the park into shape. Connie (Roger Black) and Denzel (Jerry Minor) are two unique rangers that each bring special skills (or in Denzel’s case, lack of skills) to the job, and Woody (Tom Kenny) is the hapless Head Ranger who puts nothing above his beloved park, except his adopted bear cub, Malloy (Daniel Tosh), who he’s taken in and spoils to death.",
+                    "poster_path": "/nLeOBqvDWuZfyMq7DGRT13YDRNK.jpg",
+                    "vote_average": 7.1,
+                    "vote_count": 146
+                },
+                {
+                    "adult": false,
+                    "genre_ids": [
+                        18,
+                        10770,
+                        35,
+                        27
+                    ],
+                    "id": 223178,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Black Magic",
+                    "overview": "A young man is tormented by visions of his dead cousin who attempts to warn him of a Witch capable of casting deadly spells!",
+                    "poster_path": "/vUkaBihP3hYptAX0yugbcfk3BYA.jpg",
+                    "release_date": "1992-09-21",
+                    "title": "Black Magic",
+                    "video": false,
+                    "vote_average": 3.7,
+                    "vote_count": 3
+                },
+                {
+                    "adult": false,
+                    "genre_ids": [
+                        35
+                    ],
+                    "id": 219831,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Feud",
+                    "overview": "All Dolph Beeler wanted was a can of paint remover when he went to Bud Bullard's hardware store in Millville. But a simple misunderstandling between two men has turned into an outright war between two towns in this outrageous comedy of errors.--Summary from container. -- WorldCat",
+                    "release_date": "1989-09-30",
+                    "title": "The Feud",
+                    "video": false,
+                    "vote_average": 5.3,
+                    "vote_count": 3
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Roger Black",
+            "popularity": 3.262,
+            "profile_path": "/zdULjOQbsCLmKVelMWmo6CnCyza.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 2592412,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/qXZ6oI8D48wIvUKEA2koFpCkaWa.jpg",
+                    "genre_ids": [
+                        27
+                    ],
+                    "id": 601099,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Verotika",
+                    "overview": "An anthology, based on the comics of the same name by Glenn Danzig, in which the erotic and horrific combine to create multiple ghoulish tales of bloodlust, murder, the occult and the forbidden.",
+                    "poster_path": "/prPNXINKe53gzyhAGo5BSDqtGgm.jpg",
+                    "release_date": "2019-06-13",
+                    "title": "Verotika",
+                    "video": false,
+                    "vote_average": 4.3,
+                    "vote_count": 28
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/tlC65ZAO1zoE20guiMB5oDwElyf.jpg",
+                    "genre_ids": [
+                        80,
+                        35
+                    ],
+                    "id": 672825,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Killer Looks",
+                    "overview": "A lazy, and often drunk, private detective teams up with a young woman who likes karate movies and bad puns to solve the murder of a fashion photographer.",
+                    "poster_path": "/7hVM09pkeO8TB8uZvvg2WAEo9Kk.jpg",
+                    "release_date": "2018-11-27",
+                    "title": "Killer Looks",
+                    "video": false,
+                    "vote_average": 5.5,
+                    "vote_count": 2
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Brennah Black",
+            "popularity": 2.817,
+            "profile_path": "/mVpfk4AUBS0jfTTLf2kP33Cpxmw.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 52510,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/5nhp41gx49vXjwXuDXJwQrRFsng.jpg",
+                    "genre_ids": [
+                        35,
+                        10751,
+                        14
+                    ],
+                    "id": 10719,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Elf",
+                    "overview": "When young Buddy falls into Santa's gift sack on Christmas Eve, he's transported back to the North Pole and raised as a toy-making elf by Santa's helpers. But as he grows into adulthood, he can't shake the nagging feeling that he doesn't belong. Buddy vows to visit Manhattan and find his real dad, a workaholic publisher.",
+                    "poster_path": "/oOleziEempUPu96jkGs0Pj6tKxj.jpg",
+                    "release_date": "2003-10-09",
+                    "title": "Elf",
+                    "video": false,
+                    "vote_average": 6.6,
+                    "vote_count": 3373
+                },
+                {
+                    "backdrop_path": "/rC8p2xuywf4633s1gBinfENKbqF.jpg",
+                    "first_air_date": "2000-11-04",
+                    "genre_ids": [
+                        10762,
+                        16,
+                        10765,
+                        10759
+                    ],
+                    "id": 668,
+                    "media_type": "tv",
+                    "name": "X-Men: Evolution",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "X-Men: Evolution",
+                    "overview": "Teenagers Cyclops, Jean Grey, Rogue, Nightcrawler, Shadowcat, and Spike fight for a world that fears and hates them.",
+                    "poster_path": "/At5aZIKkN8zHTAXOnQR9D3b7usW.jpg",
+                    "vote_average": 8,
+                    "vote_count": 383
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/8z5qtVE2N3AuA3bmvIQsI10Wjg8.jpg",
+                    "genre_ids": [
+                        18,
+                        27,
+                        10770
+                    ],
+                    "id": 7342,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Carrie",
+                    "overview": "Carrie White is a lonely and painfully shy teenage girl with telekinetic powers who is slowly pushed to the edge of insanity by frequent bullying from both classmates at her school, and her own religious, but abusive, mother.",
+                    "poster_path": "/knjeEeeyIwDkUtZwDfJOcUIuNdB.jpg",
+                    "release_date": "2002-11-04",
+                    "title": "Carrie",
+                    "video": false,
+                    "vote_average": 6.1,
+                    "vote_count": 386
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Meghan Black",
+            "popularity": 2.594,
+            "profile_path": "/6rsRrlhhpD5kpFnApbdnlQx5iRL.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 116486,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/qx8Pb3nVnHLBizI9792pbRN5nnm.jpg",
+                    "genre_ids": [
+                        27,
+                        53,
+                        80
+                    ],
+                    "id": 214,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Saw III",
+                    "overview": "Jigsaw has disappeared. Along with his new apprentice Amanda, the puppet-master behind the cruel, intricate games that have terrified a community and baffled police has once again eluded capture and vanished. While city detective scramble to locate him, Doctor Lynn Denlon and Jeff Reinhart are unaware that they are about to become the latest pawns on his vicious chessboard.",
+                    "poster_path": "/wvdsqBqFrAcUvp9VNdhQkmgBhL5.jpg",
+                    "release_date": "2006-10-27",
+                    "title": "Saw III",
+                    "video": false,
+                    "vote_average": 6.4,
+                    "vote_count": 3700
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/yi0tfJBw9icvlWTXvjLqpEeSTia.jpg",
+                    "genre_ids": [
+                        27,
+                        53,
+                        80
+                    ],
+                    "id": 663,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Saw IV",
+                    "overview": "Jigsaw and his apprentice Amanda are dead. Now, upon the news of Detective Kerry's murder, two seasoned FBI profilers, Agent Strahm and Agent Perez, arrive in the terrified community to assist the veteran Detective Hoffman in sifting through Jigsaw's latest grisly remains and piecing together the puzzle. However, when SWAT Commander Rigg is abducted and thrust into a game, the last officer untouched by Jigsaw has but ninety minutes to overcome a series of demented traps and save an old friend...or face the deadly consequences.",
+                    "poster_path": "/e3pLI0qN1AKGHwOcMuwTpyI2SLN.jpg",
+                    "release_date": "2007-10-25",
+                    "title": "Saw IV",
+                    "video": false,
+                    "vote_average": 6.2,
+                    "vote_count": 3077
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/oPiXgDKHHQvoqHvLVr5Yig0XuJg.jpg",
+                    "genre_ids": [
+                        18,
+                        878
+                    ],
+                    "id": 660833,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Multiverse",
+                    "overview": "Four brilliant university students are forced to confront themselves in terrifying ways when their Quantum Physics experiment leads to an entangled parallel existence that leaves them questioning who they are and what is real.",
+                    "poster_path": "/prVPT7xFz3wcdrfy5vpE3TOD2qd.jpg",
+                    "release_date": "2021-11-12",
+                    "title": "Multiverse",
+                    "video": false,
+                    "vote_average": 6.7,
+                    "vote_count": 250
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Shauna Black",
+            "popularity": 2.55,
+            "profile_path": null
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 109577,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/ctzKCslTsMRsOJNvAm1Mw8ytiHY.jpg",
+                    "genre_ids": [
+                        28,
+                        12,
+                        35,
+                        18,
+                        37
+                    ],
+                    "id": 9359,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Maverick",
+                    "overview": "Maverick is a gambler who would rather con someone than fight them, and needs an additional three thousand dollars in order to enter a winner-takes-all poker game that begins in a few days, so he joins forces with a woman gambler with a marvellous southern accent, and the two try and enter the game.",
+                    "poster_path": "/cf4L3VW5nEHIaU3pOMZSIoBQmDP.jpg",
+                    "release_date": "1994-05-20",
+                    "title": "Maverick",
+                    "video": false,
+                    "vote_average": 6.8,
+                    "vote_count": 1316
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/ccYzj0qnwcZJiX27DdmjDDEU2TR.jpg",
+                    "genre_ids": [
+                        18,
+                        10751
+                    ],
+                    "id": 105768,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Flicka: Country Pride",
+                    "overview": "Flicka and Toby help out a struggling stable owner and her teenage daughter.",
+                    "poster_path": "/jJpYWz8wqXypAWhJJ0yVUtaHc79.jpg",
+                    "release_date": "2012-05-01",
+                    "title": "Flicka: Country Pride",
+                    "video": false,
+                    "vote_average": 6.6,
+                    "vote_count": 78
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/qJ1TKRNpajzufU7nXNcaSAnR6aC.jpg",
+                    "genre_ids": [
+                        10751,
+                        12,
+                        18
+                    ],
+                    "id": 37932,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Flicka 2",
+                    "overview": "Carrie is a big-city teenager whose life is turned upside down when she moves to a horse ranch in Wyoming to live with her father. But everything changes when Carrie meets Flicka, a wild, jet-black mustang who's just as free-spirited and strong-willed as Carrie. The two form a special bond and Carrie opens her heart to her father and a handsome, local boy, but when a jealous rival puts Flicka's life in jeopardy, Carrie must do whatever it takes to save her best friend.",
+                    "poster_path": "/9fon68TdGTlcgVmHe0arPLnEvc6.jpg",
+                    "release_date": "2010-05-04",
+                    "title": "Flicka 2",
+                    "video": false,
+                    "vote_average": 6.8,
+                    "vote_count": 92
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Clint Black",
+            "popularity": 2.019,
+            "profile_path": "/brnmahG6dW9ynPB8D4YSSnWO1Wm.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 0,
+            "id": 2342623,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/7hzK0D7NGTy1MDJkWL9IQKrTmfq.jpg",
+                    "genre_ids": [
+                        35
+                    ],
+                    "id": 845404,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Tyler Perry's A Madea Homecoming",
+                    "overview": "Madea's back - hallelujer! And she's not putting up with any nonsense as family drama erupts at her great-grandson's college graduation celebration.",
+                    "poster_path": "/vzX5GNRTXsAltdU1tfASmZbzYmv.jpg",
+                    "release_date": "2022-02-25",
+                    "title": "Tyler Perry's A Madea Homecoming",
+                    "video": false,
+                    "vote_average": 6.9,
+                    "vote_count": 84
+                },
+                {
+                    "backdrop_path": "/c4CSgKL6QfkJxsWcGYDyTxpbzpW.jpg",
+                    "first_air_date": "2017-03-31",
+                    "genre_ids": [
+                        18,
+                        9648
+                    ],
+                    "id": 66788,
+                    "media_type": "tv",
+                    "name": "13 Reasons Why",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "13 Reasons Why",
+                    "overview": "After a teenage girl's perplexing suicide, a classmate receives a series of tapes that unravel the mystery of her tragic choice.",
+                    "poster_path": "/nel144y4dIOdFFid6twN5mAX9Yd.jpg",
+                    "vote_average": 7.7,
+                    "vote_count": 3538
+                },
+                {
+                    "backdrop_path": "/qmcoEOrTm6BcgR4iO7KBQKE9AKT.jpg",
+                    "first_air_date": "2003-09-23",
+                    "genre_ids": [
+                        80,
+                        18,
+                        10759
+                    ],
+                    "id": 4614,
+                    "media_type": "tv",
+                    "name": "NCIS",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "NCIS",
+                    "overview": "From murder and espionage to terrorism and stolen submarines, a team of special agents investigates any crime that has a shred of evidence connected to Navy and Marine Corps personnel, regardless of rank or position.",
+                    "poster_path": "/2exOHePjOTquUsbThPGhuEjYTyA.jpg",
+                    "vote_average": 7.6,
+                    "vote_count": 1906
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Brandon Black",
+            "popularity": 2.416,
+            "profile_path": "/4gkAF7IYsz3MTu7m2ru9o2oJuxv.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 51612,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/wNAfVj1ObGNye5fQM4tJXJGtU0.jpg",
+                    "genre_ids": [
+                        53,
+                        28,
+                        80
+                    ],
+                    "id": 156022,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Equalizer",
+                    "overview": "McCall believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when he meets Teri, a young girl under the control of ultra-violent Russian gangsters, he can’t stand idly by – he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer.",
+                    "poster_path": "/9u4yW7yPA0BQ2pv9XwiNzItwvp8.jpg",
+                    "release_date": "2014-09-24",
+                    "title": "The Equalizer",
+                    "video": false,
+                    "vote_average": 7.2,
+                    "vote_count": 7536
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/rlF1oWTeOGA6RB2g7VsE8PkV7te.jpg",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 11321,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Seven Pounds",
+                    "overview": "An IRS agent with a fateful secret embarks on an extraordinary journey of redemption by forever changing the lives of seven strangers.",
+                    "poster_path": "/pCVpsCEYtvtlg1I9h3rtglKgThu.jpg",
+                    "release_date": "2008-12-18",
+                    "title": "Seven Pounds",
+                    "video": false,
+                    "vote_average": 7.6,
+                    "vote_count": 6042
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/8GXri7UnwE7dVNfUAZVDn7Z8UBZ.jpg",
+                    "genre_ids": [
+                        12,
+                        28,
+                        37
+                    ],
+                    "id": 333484,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Magnificent Seven",
+                    "overview": "Looking to mine for gold, greedy industrialist Bartholomew Bogue seizes control of the Old West town of Rose Creek. With their lives in jeopardy, Emma Cullen and other desperate residents turn to bounty hunter Sam Chisolm for help. Chisolm recruits an eclectic group of gunslingers to take on Bogue and his ruthless henchmen. With a deadly showdown on the horizon, the seven mercenaries soon find themselves fighting for more than just money once the bullets start to fly.",
+                    "poster_path": "/ezcS78TIjgr85pVdaPDd2rSPVNs.jpg",
+                    "release_date": "2016-09-14",
+                    "title": "The Magnificent Seven",
+                    "video": false,
+                    "vote_average": 6.4,
+                    "vote_count": 5257
+                }
+            ],
+            "known_for_department": "Production",
+            "name": "Todd Black",
+            "popularity": 2.322,
+            "profile_path": null
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 1220054,
+            "known_for": [
+                {
+                    "backdrop_path": "/4SlsdRixbiGSMTZh5N0jT7kb58m.jpg",
+                    "first_air_date": "1999-02-23",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 2388,
+                    "media_type": "tv",
+                    "name": "Queer as Folk",
+                    "origin_country": [
+                        "GB"
+                    ],
+                    "original_language": "en",
+                    "original_name": "Queer as Folk",
+                    "overview": "Stuart Jones has got it all. He's rich, drop-dead gorgeous and always the centre of attention. He can be forgiven the arrogance because he's pretty close to perfection. His best mate Vince Tyler is funny, adorable and definitely a babe but, unlike his friend, has zero confidence in himself. Since time began, Vince has carried a torch for Stuart but his love remains firmly unrequited. They're both 29, hitting Canal Street every night, stalwarts of the scene but just starting to wonder where else their lives may be going. Then along comes Nathan Maloney. Young, wild and coming out with a vengeance, he crowbars his way into their world and once he arrives, nothing is ever the same again.",
+                    "poster_path": "/3jkag6ttNySuAUARmZNLYKQtSNI.jpg",
+                    "vote_average": 8.1,
+                    "vote_count": 124
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/z4YiI1tyo1xifoWHTHAcBRoFoQa.jpg",
+                    "genre_ids": [
+                        35,
+                        18
+                    ],
+                    "id": 14778,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Last Orders",
+                    "overview": "Jack Dodd was a London butcher who enjoyed a pint with his mates for over 50 years. When he died, he died as he lived, with a smile on his face watching a horse race on which he had bet, with borrowed money. But before he died he had a final request, 'Last Orders', that his ashes be scattered in the sea at Margate. The movie follows his mates, Ray, Lenny and Vic and his foster son Vince as they journey to the sea with the ashes. Along the way, the threads of their lives, their loves and their disappointments are woven together in their memories of Jack and his wife Amy",
+                    "poster_path": "/rcc3eL3wcydEUmXpX1tW9ro8NR9.jpg",
+                    "release_date": "2001-09-10",
+                    "title": "Last Orders",
+                    "video": false,
+                    "vote_average": 6.1,
+                    "vote_count": 61
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/hka1m1XehI2pnSi8a0x0yG5ymsE.jpg",
+                    "genre_ids": [
+                        18
+                    ],
+                    "id": 565386,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "The Last Tree",
+                    "overview": "Femi is a British boy of Nigerian heritage who, after being fostered in rural Lincolnshire, moves to inner-city London to live with his birth mother. Struggling with the unfamiliar culture and values of his new environment, teenage Femi has to figure out which path to adulthood he wants to take.",
+                    "poster_path": "/7j7wEeujQeSvnxREkjekS77GNh0.jpg",
+                    "release_date": "2019-09-27",
+                    "title": "The Last Tree",
+                    "video": false,
+                    "vote_average": 6.3,
+                    "vote_count": 20
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Denise Black",
+            "popularity": 2.318,
+            "profile_path": "/KtBA0fTzQYC2qcpYDF8N21XBFk.jpg"
+        },
+        {
+            "adult": false,
+            "gender": 1,
+            "id": 85478,
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/9PlW0oeOFLqVlzm5PqrPSoKRv9T.jpg",
+                    "genre_ids": [
+                        27
+                    ],
+                    "id": 20016,
+                    "media_type": "movie",
+                    "original_language": "en",
+                    "original_title": "Trailer Park of Terror",
+                    "overview": "Six troubled high school students and their chaperon, an optimistic youth ministries Pastor, return from an outdoor character building retreat in the mountains. During a raging storm, their bus crashes, hopelessly stranding them in the middle of the Trucker's Triangle, a forgotten locus of consummate evil in the middle of nowhere.",
+                    "poster_path": "/2wipDrSAa6xXLGREzZBfyLauFxq.jpg",
+                    "release_date": "2008-10-21",
+                    "title": "Trailer Park of Terror",
+                    "video": false,
+                    "vote_average": 4.9,
+                    "vote_count": 64
+                },
+                {
+                    "backdrop_path": "/8kBhAP03JpPcTklJp5idCNJhRqE.jpg",
+                    "first_air_date": "2011-10-05",
+                    "genre_ids": [
+                        18,
+                        9648,
+                        10765
+                    ],
+                    "id": 1413,
+                    "media_type": "tv",
+                    "name": "American Horror Story",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "American Horror Story",
+                    "overview": "An anthology horror drama series centering on different characters and locations, including a house with a murderous past, an asylum, a witch coven, a freak show, a hotel, a farmhouse in Roanoke, a cult, the apocalypse and a summer camp.",
+                    "poster_path": "/tiuzjuzalHj377XER1sfq7XQEIT.jpg",
+                    "vote_average": 8.2,
+                    "vote_count": 4868
+                },
+                {
+                    "backdrop_path": "/5BMwFwNzSidVYArn561acqtktxv.jpg",
+                    "first_air_date": "2005-09-19",
+                    "genre_ids": [
+                        35
+                    ],
+                    "id": 1100,
+                    "media_type": "tv",
+                    "name": "How I Met Your Mother",
+                    "origin_country": [
+                        "US"
+                    ],
+                    "original_language": "en",
+                    "original_name": "How I Met Your Mother",
+                    "overview": "A father recounts to his children - through a series of flashbacks - the journey he and his four best friends took leading up to him meeting their mother.",
+                    "poster_path": "/fyeicuHwcrK7QRvRNFq5G0EGbkO.jpg",
+                    "vote_average": 8.2,
+                    "vote_count": 3880
+                }
+            ],
+            "known_for_department": "Acting",
+            "name": "Stefanie Black",
+            "popularity": 2.17,
+            "profile_path": "/mxeFANBzlwbFzE3P3val5wuRk6p.jpg"
+        }
+    ],
+    "total_pages": 112,
+    "total_results": 2231
+}

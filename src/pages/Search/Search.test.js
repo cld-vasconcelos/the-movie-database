@@ -3,6 +3,10 @@ import userEvent from "@testing-library/user-event";
 
 import { setupTestingEnvironment } from "../../helpers/test";
 
+jest.mock("../../helpers/movies.js");
+jest.mock("../../helpers/shows.js");
+jest.mock("../../helpers/people.js");
+
 async function setupSearch(withQuery) {
     const router = await setupTestingEnvironment();
     const searchQuery = withQuery ? "black" : "";
@@ -11,7 +15,7 @@ async function setupSearch(withQuery) {
     userEvent.type(searchInput, `${searchQuery}{enter}`);
     userEvent.click(searchInput);
 
-    if(withQuery) {
+    if (withQuery) {
         await waitFor(() => screen.getByRole("heading", { name: /search 'black'/i }));
     }
 
@@ -38,21 +42,18 @@ describe("Search", () => {
     });
 
     test.each([
-        {listIndex: 0, modelType: "movie"},
-        {listIndex: 1, modelType: "tv"},
-        {listIndex: 2, modelType: "person"}
-      ])('Clicking on a $modelType search result should go to its page', async ({listIndex, modelType}) => {
+        { listIndex: 0, modelType: "movie", modelName: /black adam/i },
+        { listIndex: 1, modelType: "tv", modelName: /wednesday/i },
+        { listIndex: 2, modelType: "person", modelName: /pierce brosnan/i }
+    ])('Clicking on a $modelType search result should go to its page', async ({ listIndex, modelType, modelName }) => {
         const router = await setupSearch(true);
 
         const list = screen.getAllByRole("list")[listIndex * 2];
         const model = within(list).getAllByRole("listitem")[0];
         userEvent.click(model);
 
-        const modelId = model.id;
-        const modelName = model.getElementsByClassName("search-result-name")[0].textContent;
-    
-        await waitFor(() => screen.getByRole("heading", { name: modelName }));
+        await waitFor(() => screen.getAllByRole("heading", { name: modelName }));
 
-        expect(router.state.location.pathname).toBe(`/${modelType}/${modelId}`);
-      });
+        expect(router.state.location.pathname).toBe(`/${modelType}/${model.id}`);
+    });
 })

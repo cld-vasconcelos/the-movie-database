@@ -3,6 +3,9 @@ import userEvent from '@testing-library/user-event';
 
 import { setupTestingEnvironment } from '../../helpers/test';
 
+jest.mock("../../helpers/movies.js");
+jest.mock("../../helpers/shows.js");
+
 describe("Home", () => {
   test("Home should display top movies and shows", async () => {
     await setupTestingEnvironment();
@@ -25,7 +28,7 @@ describe("Home", () => {
 
     userEvent.click(within(movie).getByRole("link"));
 
-    await waitFor(() => screen.getByRole("heading", { name: /black/i }));
+    await waitFor(() => screen.getByRole("heading", { name: /black adam/i }));
 
     expect(router.state.location.pathname).toBe("/movie/436270");
   });

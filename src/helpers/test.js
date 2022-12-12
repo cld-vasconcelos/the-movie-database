@@ -3,17 +3,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 
 import routes from "../routes";
 
-import { mockMoviesHelper } from "../__mocks__/helpers/movies";
-import { mockShowsHelper } from "../__mocks__/helpers/shows";
-
-function setupMocks() {
-    mockMoviesHelper();
-    mockShowsHelper();
-}
-
-async function setupRouter() {
-    setupMocks();
-
+export async function setupRouting() {
     const router = createMemoryRouter(routes, {
         initialEntries: ["/"],
     });
@@ -26,8 +16,7 @@ async function setupRouter() {
 }
 
 export async function setupTestingEnvironment() {
-    setupMocks();
-    const router = await setupRouter();
+    const router = await setupRouting();
 
     return router;
 }
