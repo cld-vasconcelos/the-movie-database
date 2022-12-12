@@ -4,37 +4,17 @@ import userEvent from '@testing-library/user-event';
 
 import routes from '../../routes';
 
-import mockPopularMoviesResponse from "../../__mocks__/popular-movies.json";
-import mockPopularShowsResponse from "../../__mocks__/popular-shows.json";
-import mockMovieCreditsResponse from "../../__mocks__/movie-credits.json";
-import mockShowCreditsResponse from "../../__mocks__/show-credits.json";
-import mockShowResponse from "../../__mocks__/show.json";
+import { mockMoviesHelper } from '../../__mocks__/helpers/movies';
+import { mockShowsHelper } from '../../__mocks__/helpers/shows';
 
-jest.mock("../../helpers/movies", () => ({
-  getPopularMovies: () => {
-    return mockPopularMoviesResponse;
-  },
-  getMovie: (movieId) => {
-    return mockPopularMoviesResponse.results.find(movie => movie.id == movieId);
-  },
-  getMovieCredits: (_) => {
-    return mockMovieCreditsResponse;
-  }
-}));
-
-jest.mock("../../helpers/shows", () => ({
-  getPopularShows: () => {
-    return mockPopularShowsResponse;
-  },
-  getShow: (_) => {
-    return mockShowResponse;
-  },
-  getShowCredits: (_) => {
-    return mockShowCreditsResponse;
-  }
-}));
+function setupMocks() {
+  mockMoviesHelper();
+  mockShowsHelper();  
+}
 
 async function setup() {
+  setupMocks();
+
   const router = createMemoryRouter(routes, {
     initialEntries: ["/"],
   });
