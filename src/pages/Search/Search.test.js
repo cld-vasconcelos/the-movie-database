@@ -1,45 +1,23 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import routes from "../../routes";
-import { mockMoviesHelper } from "../../__mocks__/helpers/movies";
-import { mockShowsHelper } from "../../__mocks__/helpers/shows";
 
-function setupMocks() {
-    mockMoviesHelper();
-    mockShowsHelper();
-}
-
-async function setup() {
-    setupMocks();
-
-    const router = createMemoryRouter(routes, {
-        initialEntries: ["/"],
-    });
-
-    render(<RouterProvider router={router} />);
-
-    await waitFor(() => screen.getByRole("heading", { name: /the movie database/i }));
-
-    return router;
-}
+import { setupTestingEnvironment } from "../../helpers/test";
 
 describe("Search", () => {
     test("Submitting an empty search query should not change the page", async () => { 
-        const router = await setup();
+        const router = await setupTestingEnvironment();
         const searchQuery = "";
         const searchInput = screen.getByRole("searchbox");
 
         userEvent.type(searchInput, `${searchQuery}{enter}`);
         userEvent.click(searchInput);
 
-        
         expect(router.state.location.pathname).toBe("/");
         expect(router.state.location.search).toBe("");
     });
 
     test("Submitting a search query should redirect to the search page", async () => {
-        const router = await setup();
+        const router = await setupTestingEnvironment();
         const searchQuery = "black";
         const searchInput = screen.getByRole("searchbox");
 

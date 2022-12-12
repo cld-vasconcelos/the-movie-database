@@ -1,34 +1,11 @@
-import { render, screen, waitFor, within } from '@testing-library/react';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import routes from '../../routes';
-
-import { mockMoviesHelper } from '../../__mocks__/helpers/movies';
-import { mockShowsHelper } from '../../__mocks__/helpers/shows';
-
-function setupMocks() {
-  mockMoviesHelper();
-  mockShowsHelper();  
-}
-
-async function setup() {
-  setupMocks();
-
-  const router = createMemoryRouter(routes, {
-    initialEntries: ["/"],
-  });
-
-  render(<RouterProvider router={router} />);
-
-  await waitFor(() => screen.getByRole("heading", { name: /the movie database/i }));
-
-  return router;
-}
+import { setupTestingEnvironment } from '../../helpers/test';
 
 describe("Home", () => {
   test("Home should display top movies and shows", async () => {
-    await setup();
+    await setupTestingEnvironment();
 
     expect(screen.getByRole("heading", { name: /top movies/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /top TV/i })).toBeInTheDocument();
@@ -41,7 +18,7 @@ describe("Home", () => {
   });
 
   test("Clicking on a movie should go to the movie page", async () => {
-    const router = await setup();
+    const router = await setupTestingEnvironment();
 
     const lists = screen.getAllByRole("list");
     const movie = within(lists[0]).getAllByRole("listitem")[0];
@@ -54,7 +31,7 @@ describe("Home", () => {
   });
 
   test("Clicking on a show should go to the show page", async () => {
-    const router = await setup();
+    const router = await setupTestingEnvironment();
 
     const lists = screen.getAllByRole("list");
     const show = within(lists[1]).getAllByRole("listitem")[0];
